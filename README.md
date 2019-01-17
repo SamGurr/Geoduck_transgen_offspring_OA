@@ -1,4 +1,3 @@
 # Geoduck_transgenerational_OA
-# Geoduck_transgen_offspring_OA
-# Geoduck_transgen_offspring_OA
-# Geoduck_transgen_offspring_OA
+Here is a new repository for 2019 experiments on a transgenerational study with Pacific Geoduck!
+More details in regard to the Data and Script TBA as data is collected...
