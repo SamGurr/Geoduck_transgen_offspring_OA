@@ -1,0 +1,10 @@
+sample,mass,salinity,Sample.ID,Type, Notes
+20190128_6B,60.8189,29,1B,broodstock,
+20190127_T0,60.8327,29.04,2B,conical,
+20190127_T1,60.7019,28.96,3B,conical,
+20190127_T2,60.3964,28.96,4B,conical,
+20190127_T3,60.3812,28.93,5B,conical,bumped and spilled - redo
+20190126_T0,60.3873,29,T0,conical,bumped and spilled - redo
+20190126_T1,60.5162,28.93,T1,conical,
+20190126_T2,60.3032,28.92,T2,conical,
+20190126_T3,60.3641,28.91,T3,conical,

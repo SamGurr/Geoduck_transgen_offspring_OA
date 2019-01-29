@@ -1,0 +1,10 @@
+sample,mass,salinity,Sample.ID,Type, Notes
+20190128_1B,60.3917,28.79,1B,broodstock,
+20190128_2B,60.816,28.98,2B,broodstock,
+20190128_3B,59.3404,29,3B,broodstock,
+20190128_4B,60.4211,28.99,4B,broodstock,
+20190128_5B,60.4027,28.96,5B,broodstock,
+20190128_T0,59.7315,29.1,T0,conical,
+20190128_T1,60.6507,29.03,T1,conical,
+20190128_T2,60.3149,29.01,T2,conical,
+20190128_T3,60.7046,28.98,T3,conical,

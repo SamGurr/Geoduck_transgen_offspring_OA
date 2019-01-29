@@ -1,0 +1,10 @@
+sample,mass,salinity,Sample.ID,Type, Notes
+20190124_T1,60.0717,28.55,T1,conical,
+20190124_T3,60.9356,28.65,T3,conical,
+20190124_T2,60.911,28.57,T2,conical,
+20190124_T0,60.9586,28.51,T0,conical,
+20190124_heathstack,60.6641,28.25,heathstack,heathstack,
+20190125_T3,60.4381,28.65,T3,conical,
+20190125_T0,59.9019,28.84,T0,conical,
+20190125_T1,60.1942,28.73,T1,conical,
+20190125_T2,60.8339,28.7,T2,conical,
