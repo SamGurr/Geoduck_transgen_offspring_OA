@@ -1,0 +1,10 @@
+sample,mass,salinity,Sample.ID,Type, Notes
+20190203_T3,60.2807,28.29,T3,conical,
+20190203_T2,60.1437,28.33,T2,conical,
+20190203_T1,60.9412,28.32,T1,conical,
+20190203_T0,60.6399,28.44,T0,conical,
+20190202_T3,59.368,28.58,T3,conical,poisoned
+20190202_T2,59.507,28.59,T2,conical,poisoned
+20190202_T0,59.9845,28.58,T0,conical,poisoned
+20190202_T1,60.9108,28.63,T1,conical,poisoned
+20190127_T3,60.9883,28.93,T3,conical,poisoned
