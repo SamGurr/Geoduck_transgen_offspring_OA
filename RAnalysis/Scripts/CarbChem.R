@@ -129,11 +129,11 @@ mean.carb.output # display mean and sem
 # CHECK YOUR Y AXIS!
 pdf("C:/Users/samjg/Documents/My_Projects/Geoduck_transgen_offspring_OA/RAnalysis/Output/Water_Chem_withTA.pdf")
 par(mfrow=c(3,2))
-plot(carb.output$Treatment, carb.output$Temperature, xlab="Treatment", ylab="Temperature°C", ylim=c(12,20))
+plot(carb.output$Treatment, carb.output$Temperature, xlab="Treatment", ylab="Temperature°C", ylim=c(8,16))
 plot(carb.output$Treatment, carb.output$pH, xlab="Treatment", ylab="pH Total Scale", ylim=c(6.5,8.2))
-plot(carb.output$Treatment, carb.output$pCO2, xlab="Treatment", ylab="pCO2 µmol kg-1", ylim=c(350,2500))
+plot(carb.output$Treatment, carb.output$pCO2, xlab="Treatment", ylab="pCO2 µmol kg-1", ylim=c(350,8000))
 plot(carb.output$Treatment, carb.output$Salinity, xlab="Treatment", ylab="Salinity psu", ylim=c(25,30))
 plot(carb.output$Treatment, carb.output$TA, xlab="Treatment", ylab="Total Alkalinity µmol kg-1", ylim=c(1800,2400))
-plot(carb.output$Treatment, carb.output$Aragonite.Sat, xlab="Treatment", ylab="Aragonite Saturation State", ylim=c(0,4))
+plot(carb.output$Treatment, carb.output$Aragonite.Sat, xlab="Treatment", ylab="Aragonite Saturation State", ylim=c(0,2))
 dev.off()
 
