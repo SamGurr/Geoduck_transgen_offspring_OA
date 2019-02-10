@@ -7,7 +7,7 @@
 library("XML")
 library("plyr")
 
-xmlfile <- xmlParse("http://192.168.1.201:80/cgi-bin/datalog.xml?sdate=190201&days=5") #read in the date plus x days of Apex data
+xmlfile <- xmlParse("http://192.168.1.201:80/cgi-bin/datalog.xml?sdate=190206&days=3") #read in the date plus x days of Apex data
 
 Apex.Data <- ldply(xmlToList(xmlfile), data.frame) #convert xml to dataframe
 
@@ -37,13 +37,13 @@ colnames(Probe.Data) <- c("Date.Time", "TMP_T0", "pH_T0", "Sal", "TMP_T2", "pH_T
                            "pH_T1", "TMP_T3", "pH_T3")  #rename columns
 Probe.Data$Date.Time <- as.POSIXct(Probe.Data$Date.Time, format = "%m/%d/%Y %H:%M:%S", tz="HST") #convert date to HI time
 # CHANGE DATE FOR NEW CSV (risk overwritting previous)
-write.csv(Probe.Data, "C:/Users/samjg/Documents/My_Projects/Geoduck_transgen_offspring_OA/RAnalysis/Data/Apex_data/Output/20190206_Apex_Data_Output.data.csv") #write file to save data
+write.csv(Probe.Data, "C:/Users/samjg/Documents/My_Projects/Geoduck_transgen_offspring_OA/RAnalysis/Data/Apex_data/Output/20190209_Apex_Data_Output.data.csv") #write file to save data
 
 #plot Temp and pH and save to output
 # CHANGE DATE FOR NEW PDF (risk overwritting previous)
-pdf("C:/Users/samjg/Documents/My_Projects/Geoduck_transgen_offspring_OA/RAnalysis/Data/Apex_data/Graphs/20190206_Apex_Data_Output.data.pdf")
+pdf("C:/Users/samjg/Documents/My_Projects/Geoduck_transgen_offspring_OA/RAnalysis/Data/Apex_data/Graphs/20190209_Apex_Data_Output.data.pdf")
 par(mfrow=c(2,1))
-plot(as.numeric(as.character(TMP_T0)) ~ Date.Time, Probe.Data, col = "grey", type="l", ylim=c(12, 20),  xlab="Time", ylab="Temperature °C")
+plot(as.numeric(as.character(TMP_T0)) ~ Date.Time, Probe.Data, col = "grey", type="l", ylim=c(10, 20),  xlab="Time", ylab="Temperature °C")
 lines(as.numeric(as.character(TMP_T1)) ~ Date.Time, Probe.Data, col = "red")
 lines(as.numeric(as.character(TMP_T2)) ~ Date.Time, Probe.Data, col = "blue")
 lines(as.numeric(as.character(TMP_T3)) ~ Date.Time, Probe.Data, col = "black")
