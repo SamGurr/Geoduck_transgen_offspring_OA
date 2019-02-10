@@ -166,3 +166,32 @@ Date,Calib.Date,Time,Sample.ID,Treatment,Temperature,pH.MV,Salinity,Notes
 20190206,20190206,11:30,T2,Ambient,13.217,-45,29.27,
 20190206,20190206,11:30,T3,Elevated,13.092,-2.4,29.23,
 20190206,20190206,11:30,tripour,na,12.613,-53.8,29.85,
+20190207,20190207,14:25,1B,Elevated,11.774,2.8,29.13,
+20190207,20190207,14:25,2B,Elevated,11.816,2.6,29.12,
+20190207,20190207,14:25,3B,Ambient,11.966,-37.9,29.13,
+20190207,20190207,14:25,4B,Ambient,11.714,-36.8,29.18,
+20190207,20190207,14:25,5B,Oscillating,11.867,-37.5,2911,
+20190207,20190207,14:25,6B,Ambient,11.907,-37.9,29.12,
+20190207,20190207,14:25,T0,Elevated,13.531,7.5,29.23,TA samples in mercuric chloride
+20190207,20190207,14:25,T1,Ambient,14.041,-43.7,29.21,TA samples in mercuric chloride
+20190207,20190207,14:25,T2,Ambient,14.221,-43.3,29.16,TA samples in mercuric chloride
+20190207,20190207,14:25,T3,Elevated,13.287,3.3,29.11,TA samples in mercuric chloride
+20190207,20190207,14:25,heathstack,na,7.991,-40.3,28.96,
+20190208,20190208,10:50,1B,Elevated,11.719,1.9,28.95,
+20190208,20190208,10:50,2B,Elevated,11.839,2,28.94,
+20190208,20190208,10:50,3B,Ambient,11.805,-39.5,28.92,
+20190208,20190208,10:50,4B,Ambient,11.758,-38.1,28.95,
+20190208,20190208,10:50,5B,Oscillating,11.789,-38.2,28.91,
+20190208,20190208,10:50,6B,Ambient,11.711,-37.7,28.84,
+20190208,20190208,10:50,T0,Elevated,13.661,7.4,29.02,TA samples in mercuric chloride
+20190208,20190208,10:50,T1,Ambient,13.925,-45,29.02,TA samples in mercuric chloride
+20190208,20190208,10:50,T2,Ambient,13.711,-45.5,29,TA samples in mercuric chloride
+20190208,20190208,10:50,T3,Elevated,13.759,5.6,29,TA samples in mercuric chloride
+20190209,20190209,10:00,1B,Elevated,11.45,1.7,28.95,TA samples same day
+20190209,20190209,10:00,2B,Elevated,11.821,1.5,28.85,TA samples same day
+20190209,20190209,10:00,3B,Ambient,11.701,-40.7,28.81,TA samples same day
+20190209,20190209,10:00,4B,Ambient,11.094,-38.9,28.85,TA samples same day
+20190209,20190209,10:00,1B_2,Elevated,11.45,1.7,28.95,TA samples in mercuric chloride - analyzed same day 
+20190209,20190209,10:00,2B_2,Elevated,11.821,1.5,28.85,TA samples in mercuric chloride - analyzed same day 
+20190209,20190209,10:00,3B_2,Ambient,11.701,-40.7,28.81,TA samples in mercuric chloride - analyzed same day 
+20190209,20190209,10:00,4B_2,Ambient,11.094,-38.9,28.85,TA samples in mercuric chloride - analyzed same day 
