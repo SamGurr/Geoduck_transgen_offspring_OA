@@ -1,4 +1,4 @@
-Date,length_number.individuals,Tank.ID,ID.resp,Resp.run,Treatment,Treat.initial,Treat.Secondary,Notes
+Date,length_number.individuals,Tank.ID,SDR_position,RUN,Treatment,Treat.initial,Treat.Secondary,Notes
 20190116,7.8232,H2_T,A1,1,Ambient_Elevated,Ambient,Elevated,juveniles ~150d post expeirments in 2018
 20190116,7.9756,H3_B,A3,1,Elevated_Elevated,Elevated,Elevated,juveniles ~150d post expeirments in 2018
 20190116,7.5184,H2_T,A4,1,Ambient_Elevated,Ambient,Elevated,juveniles ~150d post expeirments in 2018
