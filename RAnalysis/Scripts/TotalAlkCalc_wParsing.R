@@ -111,14 +111,14 @@ for(i in 1:nrows) {
   mV<-which(Data$mV<pH3 & Data$mV>pH35) 
   
   #CHANGE ONLY WHEN NEW BOTTLE OF ACID IS USED----------------------------------
-  #Bottle A12 20180712 ES  - acid titrant# , 
+  #Bottle A15 20190218 SJG  - acid titrant# , 
   #density of your titrant: change every time acid is changed
   
-  d<-1.02900 -(0.0001233*mean(Data$Temperature[mV], na.rm=T)) - (0.0000037*(mean(Data$Temperature[mV], na.rm=T)^2)) 
-  #Batch A14
+  d<-1.02901 -(0.0001233*mean(Data$Temperature[mV], na.rm=T)) - (0.0000037*(mean(Data$Temperature[mV], na.rm=T)^2)) 
+  #Batch A15
   
   #concentration of your titrant: CHANGE EVERYTIME ACID IS CHANGED 
-  c<-0.100183 #Batch A14 first used by SJG on 20190121 - about 1/4 left (used by ST and KM throughout broodstock geoduck conditioning)
+  c<-0.100146 #Batch A15 first used by SJG on 20190218 NEW 
   
   #------------------------------------------------------------------------------
   
