@@ -195,3 +195,105 @@ Date,Calib.Date,Time,Sample.ID,Treatment,Temperature,pH.MV,Salinity,Notes
 20190209,20190209,10:00,2B_2,Elevated,11.821,1.5,28.85,TA samples in mercuric chloride - analyzed same day 
 20190209,20190209,10:00,3B_2,Ambient,11.701,-40.7,28.81,TA samples in mercuric chloride - analyzed same day 
 20190209,20190209,10:00,4B_2,Ambient,11.094,-38.9,28.85,TA samples in mercuric chloride - analyzed same day 
+20190214,20190214,10:00,1B,Elevated,11.676,-4,27.86,TA samples in mercuric chloride
+20190214,20190214,10:00,2B,Elevated,12.379,0.6,27.96,TA samples in mercuric chloride
+20190214,20190214,10:00,3B,Ambient,13.373,-40.3,27.95,TA samples in mercuric chloride
+20190214,20190214,10:00,4B,Ambient,12.535,-39.6,27.95,TA samples in mercuric chloride
+20190214,20190214,10:00,5B,Oscillating,12.104,-41.2,27.96,TA samples in mercuric chloride
+20190214,20190214,10:00,6B,Ambient,11.68,-40.9,27.96,TA samples in mercuric chloride
+20190214,20190214,10:00,heathstack,na,7.378,-59.4,27.97,TA samples in mercuric chloride
+20190218,20190218,9:40,1B,Ambient,11.628,-44.8,28.18,TA samples same day
+20190218,20190218,9:40,2B,Ambient,10.953,-46.7,28.25,TA samples same day
+20190218,20190218,9:40,3B,Ambient,11.05,-43.6,28.27,TA samples same day
+20190218,20190218,9:40,4B,Ambient,11.259,-44.6,28.29,TA samples same day
+20190218,20190218,9:40,5B,Ambient,11.198,-43.7,28.29,TA samples same day
+20190218,20190218,9:40,6B,Ambient,11.082,-43.6,28.27,TA samples same day
+20190219,20190219,8:30,1B,Ambient,11.658,-45.7,28.28,
+20190219,20190219,8:30,2B,Ambient,11.242,-47.1,28.3,
+20190219,20190219,8:30,3B,Ambient,11.193,-44.4,28.32,
+20190219,20190219,8:30,4B,Ambient,11.471,-44.7,28.35,
+20190219,20190219,8:30,5B,Ambient,11.409,-44,28.34,
+20190219,20190219,8:30,6B,Ambient,11.33,-44,28.33,
+20190219,20190219,8:30,T0,Ambient,13.306,-47.9,28.31,TA samples in mercuric chloride
+20190219,20190219,8:30,T1,Ambient,13.351,-48.9,28.32,TA samples in mercuric chloride
+20190219,20190219,8:30,T2,Ambient,13.267,-48.7,28.32,TA samples in mercuric chloride
+20190219,20190219,8:30,T3,Ambient,13.324,-48.3,28.33,TA samples in mercuric chloride
+20190219,20190219,8:30,T4,Ambient,13.021,-49.6,28.32,TA samples in mercuric chloride
+20190219,20190219,8:30,T5,Ambient,13.046,-49.4,28.34,TA samples in mercuric chloride
+20190219,20190219,8:30,T6,Ambient,13.317,-49.1,28.34,TA samples in mercuric chloride
+20190219,20190219,8:30,T7,Ambient,13.039,-49,28.32,TA samples in mercuric chloride
+20190221,20190221,8:20,1B,Ambient,11.246,-46.3,28.15,
+20190221,20190221,8:20,2B,Ambient,11.293,-48.3,28.24,
+20190221,20190221,8:20,3B,Ambient,11.258,-46.9,28.23,
+20190221,20190221,8:20,4B,Ambient,11.371,-47.5,28.24,
+20190221,20190221,8:20,5B,Ambient,11.331,-47.5,28.24,
+20190221,20190221,8:20,6B,Ambient,11.108,-47.1,28.24,
+20190221,20190221,8:20,T0,Ambient,12.251,-47,28.32,TA samples in mercuric chloride
+20190221,20190221,8:20,T1,Ambient,12.329,-50.7,28.28,TA samples in mercuric chloride
+20190221,20190221,8:20,T2,Ambient,12.381,-50.5,28.28,TA samples in mercuric chloride
+20190221,20190221,8:20,T3,Ambient,12.422,-50.3,28.26,TA samples in mercuric chloride
+20190221,20190221,8:20,T4,Ambient,12.529,-50.3,28.26,TA samples in mercuric chloride
+20190221,20190221,8:20,T5,Ambient,12.435,-50.3,28.26,TA samples in mercuric chloride
+20190221,20190221,8:20,T6,Ambient,12.463,-50.4,28.25,TA samples in mercuric chloride
+20190221,20190221,8:20,T7,Ambient,12.755,-49.4,28.26,TA samples in mercuric chloride
+20190222,20190222,9:40,T0,Ambient,11.189,-50.5,28.47,
+20190222,20190222,9:40,T1,Ambient,11.065,-52.2,28.5,
+20190222,20190222,9:40,T2,Ambient,11.084,-52.4,28.49,
+20190222,20190222,9:40,T3,Ambient,11.108,-52.1,28.49,
+20190222,20190222,9:40,T4,Ambient,11.107,-52.3,28.51,
+20190222,20190222,9:40,T5,Ambient,11.066,-52.3,28.52,
+20190222,20190222,9:40,T6,Ambient,11.12,-52.3,28.5,
+20190222,20190222,9:40,T7,Ambient,11.046,-51.2,28.58,
+20190223,20190223,10:30,T0,Ambient,12.951,-47.1,28.84,
+20190223,20190223,10:30,T1,Ambient,12.984,-47.8,28.86,
+20190223,20190223,10:30,T2,Ambient,12.966,-47.9,28.87,
+20190223,20190223,10:30,T3,Ambient,12.909,-47.9,28.88,
+20190223,20190223,10:30,T4,Ambient,12.923,-47.7,28.88,
+20190223,20190223,10:30,T5,Ambient,12.995,-48,28.89,
+20190223,20190223,10:30,T6,Ambient,12.947,-47.6,28.89,
+20190223,20190223,10:30,T7,Ambient,12.939,-48.2,28.89,
+20190224,20190224,8:46,T0,Ambient,13.661,-47.9,28.77,
+20190224,20190224,8:46,T1,Ambient,13.625,-48.1,28.81,
+20190224,20190224,8:46,T2,Ambient,13.691,-48.5,28.81,
+20190224,20190224,8:46,T3,Ambient,13.722,-48.5,28.81,
+20190224,20190224,8:46,T4,Ambient,13.913,-47.9,28.82,
+20190224,20190224,8:46,T5,Ambient,13.795,-49.4,28.81,
+20190224,20190224,8:46,T6,Ambient,14.052,-48.5,28.82,
+20190224,20190224,8:46,T7,Ambient,13.762,-49,28.81,
+20190225,20190225,10:00,T0,Ambient,12.662,-49.5,28.5,
+20190225,20190225,10:00,T1,Ambient,12.556,-49.6,28.56,
+20190225,20190225,10:00,T2,Ambient,12.636,-49.6,28.56,
+20190225,20190225,10:00,T3,Ambient,12.508,-50.1,28.56,
+20190225,20190225,10:00,T4,Ambient,12.454,-50.1,28.57,
+20190225,20190225,10:00,T5,Ambient,12.519,-50.6,28.57,
+20190225,20190225,10:00,T6,Ambient,12.485,-50.3,28.6,
+20190225,20190225,10:00,T7,Ambient,12.412,-50.3,28.58,
+20190312,20190312,11:15,5B,Oscillating,11.481,-58.1,28.53,"Remember, No longer treated, been ambient for MONTHS, TA samples in mercuric chloride"
+20190312,20190312,11:15,6B,Ambient,11.383,-56.5,28.56,TA samples in mercuric chloride
+20190316,20190316,16:30,5B,Oscillating,11.436,-52.7,28.52,TA samples in mercuric chloride
+20190316,20190316,16:30,6B,Ambient,11.496,-51.2,28.55,TA samples in mercuric chloride
+20190316,20190316,16:30,T4,Ambient,11.364,-58.6,28.55,
+20190316,20190316,16:30,T5,Ambient,11.263,-59.2,28.53,
+20190316,20190316,16:30,T6,Ambient,11.408,-58.1,28.52,
+20190316,20190316,16:30,T7,Ambient,11.378,-58,28.53,
+20190316,20190316,16:30,T0,Ambient,11.382,-55.7,28.46,TA samples in mercuric chloride
+20190316,20190316,16:30,T1,Ambient,11.398,-57.8,28.55,TA samples in mercuric chloride
+20190316,20190316,16:30,T2,Ambient,11.357,-58,28.54,TA samples in mercuric chloride
+20190316,20190316,16:30,T3,Ambient,11.273,-57.8,28.55,TA samples in mercuric chloride
+20190317,20190317,18:45,T0,Ambient,11.664,-48.5,28.19,TA samples in mercuric chloride
+20190317,20190317,18:45,T1,Ambient,11.415,-52,28.56,TA samples in mercuric chloride
+20190317,20190317,18:45,T2,Ambient,11.518,-53.1,28.6,TA samples in mercuric chloride
+20190317,20190317,18:45,T3,Ambient,11.692,-53.2,28.57,TA samples in mercuric chloride
+20190318,20190318,11:00,T0,Ambient,11.76,-44.3,28.32,TA samples in mercuric chloride
+20190318,20190318,11:00,T1,Ambient,11.74,-51.7,28.68,TA samples in mercuric chloride
+20190318,20190318,11:00,T2,Ambient,11.704,-52.4,28.67,TA samples in mercuric chloride
+20190318,20190318,11:00,T3,Ambient,11.664,-52.8,28.72,TA samples in mercuric chloride
+20190318,20190318,11:00,5B,Oscillating,11.757,-50,28.73,
+20190318,20190318,11:00,6B,Ambient,11.739,-49.2,28.68,
+20190319,20190319,9:50,T0,Ambient,11.86,-51,28.57,TA samples same day
+20190319,20190319,9:50,T1,Ambient,11.968,-53.8,28.7,TA samples same day
+20190319,20190319,9:50,T2,Ambient,11.929,-54.2,28.7,TA samples same day
+20190319,20190319,9:50,T3,Ambient,11.967,-54.4,28.71,TA samples same day
+20190319,20190319,9:50,5B,Oscillating,11.981,-49.3,28.75,
+20190319,20190319,9:50,6B,Ambient,11.878,-48.4,28.75,
+20190319,20190319,9:50,T4,na,11.863,-9.9,28.71,Test true pH with APEX at 6.9. TA samples same day
