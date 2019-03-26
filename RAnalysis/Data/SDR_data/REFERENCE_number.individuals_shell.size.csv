@@ -72,25 +72,25 @@ Date,length_number.individuals,Tank.ID,SDR_position,RUN,Treatment,Treat.initial,
 20190124,2,T1,D5,1,Elevated,NA,NA,first attempt with new 80ul resp plate
 20190124,NA,Blank_T0,D6,1,Elevated,NA,NA,first attempt with new 80ul resp plate
 20190126,5,T0,A1,1,Elevated,NA,NA,larvae from ambient parents (strip spawn)
-20190126,NA,Blank,A2,1,Elevated,NA,NA,larvae from ambient parents (strip spawn)
-20190126,NA,Blank,A3,1,Elevated,NA,NA,larvae from ambient parents (strip spawn)
+20190126,NA,Blank,A2,1,NA,NA,NA,NA
+20190126,NA,Blank,A3,1,NA,NA,NA,NA
 20190126,5,T0,A4,1,Elevated,NA,NA,larvae from ambient parents (strip spawn)
 20190126,5,T0,A5,1,Elevated,NA,NA,larvae from ambient parents (strip spawn)
 20190126,5,T0,A6,1,Elevated,NA,NA,larvae from ambient parents (strip spawn)
-20190126,NA,Blank,B1,1,Elevated,NA,NA,larvae from ambient parents (strip spawn)
+20190126,NA,Blank,B1,1,NA,NA,NA,NA
 20190126,5,T0,B2,1,Elevated,NA,NA,larvae from ambient parents (strip spawn)
-20190126,NA,Blank,B3,1,Elevated,NA,NA,larvae from ambient parents (strip spawn)
-20190126,NA,Blank,B4,1,Elevated,NA,NA,larvae from ambient parents (strip spawn)
+20190126,NA,Blank,B3,1,NA,NA,NA,NA
+20190126,NA,Blank,B4,1,NA,NA,NA,NA
 20190126,5,T0,B5,1,Elevated,NA,NA,larvae from ambient parents (strip spawn)
 20190126,5,T0,B6,1,Elevated,NA,NA,larvae from ambient parents (strip spawn)
-20190126,NA,Blank,C1,1,Elevated,NA,NA,larvae from ambient parents (strip spawn)
-20190126,NA,Blank,C2,1,Elevated,NA,NA,larvae from ambient parents (strip spawn)
-20190126,NA,Blank,C3,1,Elevated,NA,NA,larvae from ambient parents (strip spawn)
+20190126,NA,Blank,C1,1,NA,NA,NA,NA
+20190126,NA,Blank,C2,1,NA,NA,NA,NA
+20190126,NA,Blank,C3,1,NA,NA,NA,NA
 20190126,5,T0,C4,1,Elevated,NA,NA,larvae from ambient parents (strip spawn)
 20190126,5,T0,C5,1,Elevated,NA,NA,larvae from ambient parents (strip spawn)
 20190126,5,T0,C6,1,Elevated,NA,NA,larvae from ambient parents (strip spawn)
-20190126,NA,Blank,D1,1,Elevated,NA,NA,larvae from ambient parents (strip spawn)
-20190126,NA,Blank,D2,1,Elevated,NA,NA,larvae from ambient parents (strip spawn)
+20190126,NA,Blank,D1,1,NA,NA,NA,NA
+20190126,NA,Blank,D2,1,NA,NA,NA,NA
 20190126,5,T0,D3,1,Elevated,NA,NA,larvae from ambient parents (strip spawn)
 20190126,5,T0,D4,1,Elevated,NA,NA,larvae from ambient parents (strip spawn)
 20190126,5,T0,D5,1,Elevated,NA,NA,larvae from ambient parents (strip spawn)
@@ -98,24 +98,24 @@ Date,length_number.individuals,Tank.ID,SDR_position,RUN,Treatment,Treat.initial,
 20190126,5,T2,A1,2,Ambient,NA,NA,larvae from ambient parents (strip spawn)
 20190126,5,T2,A2,2,Ambient,NA,NA,larvae from ambient parents (strip spawn)
 20190126,5,T2,A3,2,Ambient,NA,NA,larvae from ambient parents (strip spawn)
-20190126,NA,Blank,A4,2,Ambient,NA,NA,larvae from ambient parents (strip spawn)
-20190126,NA,Blank,A5,2,Ambient,NA,NA,larvae from ambient parents (strip spawn)
+20190126,NA,Blank,A4,2,NA,NA,NA,NA
+20190126,NA,Blank,A5,2,NA,NA,NA,NA
 20190126,5,T2,A6,2,Ambient,NA,NA,larvae from ambient parents (strip spawn)
-20190126,NA,Blank,B1,2,Ambient,NA,NA,larvae from ambient parents (strip spawn)
-20190126,NA,Blank,B2,2,Ambient,NA,NA,larvae from ambient parents (strip spawn)
+20190126,NA,Blank,B1,2,NA,NA,NA,NA
+20190126,NA,Blank,B2,2,NA,NA,NA,NA
 20190126,5,T2,B3,2,Ambient,NA,NA,larvae from ambient parents (strip spawn)
 20190126,5,T2,B4,2,Ambient,NA,NA,larvae from ambient parents (strip spawn)
-20190126,NA,Blank,B5,2,Ambient,NA,NA,larvae from ambient parents (strip spawn)
+20190126,NA,Blank,B5,2,NA,NA,NA,NA
 20190126,5,T2,B6,2,Ambient,NA,NA,larvae from ambient parents (strip spawn)
 20190126,5,T2,C1,2,Ambient,NA,NA,larvae from ambient parents (strip spawn)
-20190126,NA,Blank,C2,2,Ambient,NA,NA,larvae from ambient parents (strip spawn)
+20190126,NA,Blank,C2,2,NA,NA,NA,NA
 20190126,5,T2,C3,2,Ambient,NA,NA,larvae from ambient parents (strip spawn)
 20190126,5,T2,C4,2,Ambient,NA,NA,larvae from ambient parents (strip spawn)
-20190126,NA,Blank,C5,2,Ambient,NA,NA,larvae from ambient parents (strip spawn)
-20190126,NA,Blank,C6,2,Ambient,NA,NA,larvae from ambient parents (strip spawn)
+20190126,NA,Blank,C5,2,NA,NA,NA,NA
+20190126,NA,Blank,C6,2,NA,NA,NA,NA
 20190126,5,T2,D1,2,Ambient,NA,NA,larvae from ambient parents (strip spawn)
-20190126,NA,Blank,D2,2,Ambient,NA,NA,larvae from ambient parents (strip spawn)
-20190126,NA,Blank,D3,2,Ambient,NA,NA,larvae from ambient parents (strip spawn)
+20190126,NA,Blank,D2,2,NA,NA,NA,NA
+20190126,NA,Blank,D3,2,NA,NA,NA,NA
 20190126,5,T2,D4,2,Ambient,NA,NA,larvae from ambient parents (strip spawn)
 20190126,5,T2,D5,2,Ambient,NA,NA,larvae from ambient parents (strip spawn)
 20190126,5,T2,D6,2,Ambient,NA,NA,larvae from ambient parents (strip spawn)
@@ -123,58 +123,58 @@ Date,length_number.individuals,Tank.ID,SDR_position,RUN,Treatment,Treat.initial,
 20190126,3,T3,A2,3,Ambient,NA,NA,larvae from ambient parents (strip spawn)
 20190126,3,T3,A3,3,Ambient,NA,NA,larvae from ambient parents (strip spawn)
 20190126,3,T3,A4,3,Ambient,NA,NA,larvae from ambient parents (strip spawn)
-20190126,NA,Blank,A5,3,Ambient,NA,NA,larvae from ambient parents (strip spawn)
-20190126,NA,Blank,A6,3,Ambient,NA,NA,larvae from ambient parents (strip spawn)
-20190126,NA,Blank,B1,3,Ambient,NA,NA,larvae from ambient parents (strip spawn)
+20190126,NA,Blank,A5,3,NA,NA,NA,larvae from ambient parents (strip spawn)
+20190126,NA,Blank,A6,3,NA,NA,NA,larvae from ambient parents (strip spawn)
+20190126,NA,Blank,B1,3,NA,NA,NA,larvae from ambient parents (strip spawn)
 20190126,3,T3,B2,3,Ambient,NA,NA,larvae from ambient parents (strip spawn)
 20190126,3,T3,B3,3,Ambient,NA,NA,larvae from ambient parents (strip spawn)
 20190126,3,T3,B4,3,Ambient,NA,NA,larvae from ambient parents (strip spawn)
-20190126,NA,Blank,B5,3,Ambient,NA,NA,larvae from ambient parents (strip spawn)
-20190126,NA,Blank,B6,3,Ambient,NA,NA,larvae from ambient parents (strip spawn)
-20190126,NA,Blank,C1,3,Ambient,NA,NA,larvae from ambient parents (strip spawn)
-20190126,NA,Blank,C2,3,Ambient,NA,NA,larvae from ambient parents (strip spawn)
-20190126,NA,Blank,C3,3,Ambient,NA,NA,larvae from ambient parents (strip spawn)
+20190126,NA,Blank,B5,3,NA,NA,NA,larvae from ambient parents (strip spawn)
+20190126,NA,Blank,B6,3,NA,NA,NA,larvae from ambient parents (strip spawn)
+20190126,NA,Blank,C1,3,NA,NA,NA,larvae from ambient parents (strip spawn)
+20190126,NA,Blank,C2,3,NA,NA,NA,larvae from ambient parents (strip spawn)
+20190126,NA,Blank,C3,3,NA,NA,NA,larvae from ambient parents (strip spawn)
 20190126,3,T3,C4,3,Ambient,NA,NA,larvae from ambient parents (strip spawn)
 20190126,3,T3,C5,3,Ambient,NA,NA,larvae from ambient parents (strip spawn)
-20190126,NA,Blank,C6,3,Ambient,NA,NA,larvae from ambient parents (strip spawn)
-20190126,NA,Blank,D1,3,Ambient,NA,NA,larvae from ambient parents (strip spawn)
-20190126,NA,Blank,D2,3,Ambient,NA,NA,larvae from ambient parents (strip spawn)
-20190126,NA,Blank,D3,3,Ambient,NA,NA,larvae from ambient parents (strip spawn)
-20190126,NA,Blank,D4,3,Ambient,NA,NA,larvae from ambient parents (strip spawn)
+20190126,NA,Blank,C6,3,NA,NA,NA,NA
+20190126,NA,Blank,D1,3,NA,NA,NA,NA
+20190126,NA,Blank,D2,3,NA,NA,NA,NA
+20190126,NA,Blank,D3,3,NA,NA,NA,NA
+20190126,NA,Blank,D4,3,NA,NA,NA,NA
 20190126,3,T3,D5,3,Ambient,NA,NA,larvae from ambient parents (strip spawn)
 20190126,3,T3,D6,3,Ambient,NA,NA,larvae from ambient parents (strip spawn)
 20190130,4,T2,A1,1,Ambient_Ambient,Ambient,Ambient,larvae from strip spawn - recirocal exposure post hatch
-20190130,NA,Blank,A2,1,Ambient_Ambient,Ambient,Ambient,larvae from strip spawn - recirocal exposure post hatch
+20190130,NA,Blank,A2,1,NA,NA,NA,NA
 20190130,4,T2,A3,1,Ambient_Ambient,Ambient,Ambient,larvae from strip spawn - recirocal exposure post hatch
-20190130,NA,Blank,A4,1,Ambient_Ambient,Ambient,Ambient,larvae from strip spawn - recirocal exposure post hatch
+20190130,NA,Blank,A4,1,NA,NA,NA,NA
 20190130,4,T2,A5,1,Ambient_Ambient,Ambient,Ambient,larvae from strip spawn - recirocal exposure post hatch
 20190130,4,T2,A6,1,Ambient_Ambient,Ambient,Ambient,larvae from strip spawn - recirocal exposure post hatch
 20190130,4,T2,B1,1,Ambient_Ambient,Ambient,Ambient,larvae from strip spawn - recirocal exposure post hatch
-20190130,NA,Blank,B2,1,Ambient_Ambient,Ambient,Ambient,larvae from strip spawn - recirocal exposure post hatch
+20190130,NA,Blank,B2,1,NA,NA,NA,NA
 20190130,4,T2,B3,1,Ambient_Ambient,Ambient,Ambient,larvae from strip spawn - recirocal exposure post hatch
-20190130,NA,Blank,B4,1,Ambient_Ambient,Ambient,Ambient,larvae from strip spawn - recirocal exposure post hatch
+20190130,NA,Blank,B4,1,NA,NA,NA,NA
 20190130,4,T2,B5,1,Ambient_Ambient,Ambient,Ambient,larvae from strip spawn - recirocal exposure post hatch
 20190130,4,T2,B6,1,Ambient_Ambient,Ambient,Ambient,larvae from strip spawn - recirocal exposure post hatch
 20190130,4,T2,C1,1,Ambient_Ambient,Ambient,Ambient,larvae from strip spawn - recirocal exposure post hatch
-20190130,NA,Blank,C2,1,Ambient_Ambient,Ambient,Ambient,larvae from strip spawn - recirocal exposure post hatch
+20190130,NA,Blank,C2,1,NA,NA,NA,NA
 20190130,4,T2,C3,1,Ambient_Ambient,Ambient,Ambient,larvae from strip spawn - recirocal exposure post hatch
 20190130,NA,Blank,C4,1,Ambient_Ambient,Ambient,Ambient,larvae from strip spawn - recirocal exposure post hatch
 20190130,4,T2,C5,1,Ambient_Ambient,Ambient,Ambient,larvae from strip spawn - recirocal exposure post hatch
 20190130,4,T2,C6,1,Ambient_Ambient,Ambient,Ambient,larvae from strip spawn - recirocal exposure post hatch
 20190130,4,T2,D1,1,Ambient_Ambient,Ambient,Ambient,larvae from strip spawn - recirocal exposure post hatch
-20190130,NA,Blank,D2,1,Ambient_Ambient,Ambient,Ambient,larvae from strip spawn - recirocal exposure post hatch
+20190130,NA,Blank,D2,1,NA,NA,NA,NA
 20190130,4,T2,D3,1,Ambient_Ambient,Ambient,Ambient,larvae from strip spawn - recirocal exposure post hatch
-20190130,NA,Blank,D4,1,Ambient_Ambient,Ambient,Ambient,larvae from strip spawn - recirocal exposure post hatch
+20190130,NA,Blank,D4,1,NA,NA,NA,NA
 20190130,4,T2,D5,1,Ambient_Ambient,Ambient,Ambient,larvae from strip spawn - recirocal exposure post hatch
 20190130,4,T2,D6,1,Ambient_Ambient,Ambient,Ambient,larvae from strip spawn - recirocal exposure post hatch
 20190130,5,T3,A1,2,Ambient_Elevated,Ambient,Elevated,larvae from strip spawn - recirocal exposure post hatch
 20190130,5,T3,A2,2,Ambient_Elevated,Ambient,Elevated,larvae from strip spawn - recirocal exposure post hatch
-20190130,NA,Blank,A3,2,Ambient_Elevated,Ambient,Elevated,larvae from strip spawn - recirocal exposure post hatch
-20190130,NA,Blank,A4,2,Ambient_Elevated,Ambient,Elevated,larvae from strip spawn - recirocal exposure post hatch
+20190130,NA,Blank,A3,2,NA,NA,NA,NA
+20190130,NA,Blank,A4,2,NA,NA,NA,NA
 20190130,5,T3,A5,2,Ambient_Elevated,Ambient,Elevated,larvae from strip spawn - recirocal exposure post hatch
 20190130,5,T3,A6,2,Ambient_Elevated,Ambient,Elevated,larvae from strip spawn - recirocal exposure post hatch
-20190130,NA,Blank,B1,2,Ambient_Elevated,Ambient,Elevated,larvae from strip spawn - recirocal exposure post hatch
-20190130,NA,Blank,B2,2,Ambient_Elevated,Ambient,Elevated,larvae from strip spawn - recirocal exposure post hatch
+20190130,NA,Blank,B1,2,NA,NA,NA,NA
+20190130,NA,Blank,B2,2,NA,NA,NA,NA
 20190130,5,T3,B3,2,Ambient_Elevated,Ambient,Elevated,larvae from strip spawn - recirocal exposure post hatch
 20190130,5,T3,B4,2,Ambient_Elevated,Ambient,Elevated,larvae from strip spawn - recirocal exposure post hatch
 20190130,5,T3,B5,2,Ambient_Elevated,Ambient,Elevated,larvae from strip spawn - recirocal exposure post hatch
@@ -183,12 +183,12 @@ Date,length_number.individuals,Tank.ID,SDR_position,RUN,Treatment,Treat.initial,
 20190130,5,T3,C2,2,Ambient_Elevated,Ambient,Elevated,larvae from strip spawn - recirocal exposure post hatch
 20190130,5,T3,C3,2,Ambient_Elevated,Ambient,Elevated,larvae from strip spawn - recirocal exposure post hatch
 20190130,5,T3,C4,2,Ambient_Elevated,Ambient,Elevated,larvae from strip spawn - recirocal exposure post hatch
-20190130,NA,Blank,C5,2,Ambient_Elevated,Ambient,Elevated,larvae from strip spawn - recirocal exposure post hatch
-20190130,NA,Blank,C6,2,Ambient_Elevated,Ambient,Elevated,larvae from strip spawn - recirocal exposure post hatch
+20190130,NA,Blank,C5,2,NA,NA,NA,NA
+20190130,NA,Blank,C6,2,NA,NA,NA,NA
 20190130,5,T3,D1,2,Ambient_Elevated,Ambient,Elevated,larvae from strip spawn - recirocal exposure post hatch
 20190130,5,T3,D2,2,Ambient_Elevated,Ambient,Elevated,larvae from strip spawn - recirocal exposure post hatch
-20190130,NA,Blank,D3,2,Ambient_Elevated,Ambient,Elevated,larvae from strip spawn - recirocal exposure post hatch
-20190130,NA,Blank,D4,2,Ambient_Elevated,Ambient,Elevated,larvae from strip spawn - recirocal exposure post hatch
+20190130,NA,Blank,D3,2,NA,NA,NA,NA
+20190130,NA,Blank,D4,2,NA,NA,NA,NA
 20190130,5,T3,D5,2,Ambient_Elevated,Ambient,Elevated,larvae from strip spawn - recirocal exposure post hatch
 20190130,5,T3,D6,2,Ambient_Elevated,Ambient,Elevated,larvae from strip spawn - recirocal exposure post hatch
 20190131,40,embryos,A1,1,Elevated parents - embryos in ambient,NA,NA,embryos- natural spawn of elevated
@@ -196,49 +196,49 @@ Date,length_number.individuals,Tank.ID,SDR_position,RUN,Treatment,Treat.initial,
 20190131,40,embryos,A3,1,Elevated parents - embryos in ambient,NA,NA,embryos- natural spawn of elevated
 20190131,40,embryos,A4,1,Elevated parents - embryos in ambient,NA,NA,embryos- natural spawn of elevated
 20190131,40,embryos,A5,1,Elevated parents - embryos in ambient,NA,NA,embryos- natural spawn of elevated
-20190131,NA,Blank,A6,1,Elevated parents - embryos in ambient,NA,NA,embryos- natural spawn of elevated
+20190131,NA,Blank,A6,1,NA,NA,NA,NA
 20190131,40,embryos,B1,1,Elevated parents - embryos in ambient,NA,NA,embryos- natural spawn of elevated
 20190131,40,embryos,B2,1,Elevated parents - embryos in ambient,NA,NA,embryos- natural spawn of elevated
 20190131,40,embryos,B3,1,Elevated parents - embryos in ambient,NA,NA,embryos- natural spawn of elevated
 20190131,40,embryos,B4,1,Elevated parents - embryos in ambient,NA,NA,embryos- natural spawn of elevated
 20190131,40,embryos,B5,1,Elevated parents - embryos in ambient,NA,NA,embryos- natural spawn of elevated
-20190131,NA,Blank,B6,1,Elevated parents - embryos in ambient,NA,NA,embryos- natural spawn of elevated
+20190131,NA,Blank,B6,1,NA,NA,NA,NA
 20190131,40,embryos,C1,1,Elevated parents - embryos in ambient,NA,NA,embryos- natural spawn of elevated
 20190131,40,embryos,C2,1,Elevated parents - embryos in ambient,NA,NA,embryos- natural spawn of elevated
 20190131,40,embryos,C3,1,Elevated parents - embryos in ambient,NA,NA,embryos- natural spawn of elevated
 20190131,40,embryos,C4,1,Elevated parents - embryos in ambient,NA,NA,embryos- natural spawn of elevated
 20190131,40,embryos,C5,1,Elevated parents - embryos in ambient,NA,NA,embryos- natural spawn of elevated
-20190131,NA,Blank,C6,1,Elevated parents - embryos in ambient,NA,NA,embryos- natural spawn of elevated
+20190131,NA,Blank,C6,1,NA,NA,NA,NA
 20190131,40,embryos,D1,1,Elevated parents - embryos in ambient,NA,NA,embryos- natural spawn of elevated
 20190131,40,embryos,D2,1,Elevated parents - embryos in ambient,NA,NA,embryos- natural spawn of elevated
 20190131,40,embryos,D3,1,Elevated parents - embryos in ambient,NA,NA,embryos- natural spawn of elevated
 20190131,40,embryos,D4,1,Elevated parents - embryos in ambient,NA,NA,embryos- natural spawn of elevated
 20190131,40,embryos,D5,1,Elevated parents - embryos in ambient,NA,NA,embryos- natural spawn of elevated
-20190131,NA,Blank,D6,1,Elevated parents - embryos in ambient,NA,NA,embryos- natural spawn of elevated
-20190204,NA,Blank,A1,1,Ambient,NA,NA,approx. 3.75 days old - elevated parents
+20190131,NA,Blank,D6,1,NA,NA,NA,NA
+20190204,NA,Blank,A1,1,NA,NA,NA,NA
 20190204,8,T1,A2,1,Ambient,NA,NA,approx. 3.75 days old - elevated parents
 20190204,8,T1,A3,1,Ambient,NA,NA,approx. 3.75 days old - elevated parents
 20190204,8,T1,A4,1,Ambient,NA,NA,approx. 3.75 days old - elevated parents
 20190204,8,T1,A5,1,Ambient,NA,NA,approx. 3.75 days old - elevated parents
-20190204,NA,Blank,A6,1,Ambient,NA,NA,approx. 3.75 days old - elevated parents
-20190204,NA,Blank,B1,1,Ambient,NA,NA,approx. 3.75 days old - elevated parents
+20190204,NA,Blank,A6,1,NA,NA,NA,NA
+20190204,NA,Blank,B1,1,NA,NA,NA,NA
 20190204,8,T1,B2,1,Ambient,NA,NA,approx. 3.75 days old - elevated parents
 20190204,8,T1,B3,1,Ambient,NA,NA,approx. 3.75 days old - elevated parents
 20190204,8,T1,B4,1,Ambient,NA,NA,approx. 3.75 days old - elevated parents
 20190204,8,T1,B5,1,Ambient,NA,NA,approx. 3.75 days old - elevated parents
-20190204,NA,Blank,B6,1,Ambient,NA,NA,approx. 3.75 days old - elevated parents
-20190204,NA,Blank,C1,1,Ambient,NA,NA,approx. 3.75 days old - elevated parents
+20190204,NA,Blank,B6,1,NA,NA,NA,NA
+20190204,NA,Blank,C1,1,NA,NA,NA,NA
 20190204,8,T1,C2,1,Ambient,NA,NA,approx. 3.75 days old - elevated parents
 20190204,8,T1,C3,1,Ambient,NA,NA,approx. 3.75 days old - elevated parents
 20190204,8,T1,C4,1,Ambient,NA,NA,approx. 3.75 days old - elevated parents
 20190204,8,T1,C5,1,Ambient,NA,NA,approx. 3.75 days old - elevated parents
-20190204,NA,Blank,C6,1,Ambient,NA,NA,approx. 3.75 days old - elevated parents
-20190204,NA,Blank,D1,1,Ambient,NA,NA,approx. 3.75 days old - elevated parents
+20190204,NA,Blank,C6,1,NA,NA,NA,NA
+20190204,NA,Blank,D1,1,NA,NA,NA,NA
 20190204,8,T1,D2,1,Ambient,NA,NA,approx. 3.75 days old - elevated parents
 20190204,8,T1,D3,1,Ambient,NA,NA,approx. 3.75 days old - elevated parents
 20190204,8,T1,D4,1,Ambient,NA,NA,approx. 3.75 days old - elevated parents
 20190204,8,T1,D5,1,Ambient,NA,NA,approx. 3.75 days old - elevated parents
-20190204,NA,Blank,D6,1,Ambient,NA,NA,approx. 3.75 days old - elevated parents
+20190204,NA,Blank,D6,1,NA,NA,NA,NA
 20190204,10,T2,A1,2,Ambient,NA,NA,approx. 3.75 days old - elevated parents
 20190204,10,T2,A2,2,Ambient,NA,NA,approx. 3.75 days old - elevated parents
 20190204,10,T2,A3,2,Ambient,NA,NA,approx. 3.75 days old - elevated parents
@@ -252,10 +252,10 @@ Date,length_number.individuals,Tank.ID,SDR_position,RUN,Treatment,Treat.initial,
 20190204,10,T2,B5,2,Ambient,NA,NA,approx. 3.75 days old - elevated parents
 20190204,10,T2,B6,2,Ambient,NA,NA,approx. 3.75 days old - elevated parents
 20190204,10,T2,C1,2,Ambient,NA,NA,approx. 3.75 days old - elevated parents
-20190204,NA,Blank,C2,2,Ambient,NA,NA,approx. 3.75 days old - elevated parents
-20190204,NA,Blank,C3,2,Ambient,NA,NA,approx. 3.75 days old - elevated parents
-20190204,NA,Blank,C4,2,Ambient,NA,NA,approx. 3.75 days old - elevated parents
-20190204,NA,Blank,C5,2,Ambient,NA,NA,approx. 3.75 days old - elevated parents
+20190204,NA,Blank,C2,2,NA,NA,NA,NA
+20190204,NA,Blank,C3,2,NA,NA,NA,NA
+20190204,NA,Blank,C4,2,NA,NA,NA,NA
+20190204,NA,Blank,C5,2,NA,NA,NA,NA
 20190204,10,T2,C6,2,Ambient,NA,NA,approx. 3.75 days old - elevated parents
 20190204,10,T2,D1,2,Ambient,NA,NA,approx. 3.75 days old - elevated parents
 20190204,10,T2,D2,2,Ambient,NA,NA,approx. 3.75 days old - elevated parents
@@ -275,28 +275,28 @@ Date,length_number.individuals,Tank.ID,SDR_position,RUN,Treatment,Treat.initial,
 20190205,10,T0,B4,1,Elevated,NA,NA,approx. 4.75 days old - elevated parents
 20190205,10,T0,B5,1,Elevated,NA,NA,approx. 4.75 days old - elevated parents
 20190205,10,T0,B6,1,Elevated,NA,NA,approx. 4.75 days old - elevated parents
-20190205,NA,Blank,C1,1,Elevated,NA,NA,approx. 4.75 days old - elevated parents
-20190205,NA,Blank,C2,1,Elevated,NA,NA,approx. 4.75 days old - elevated parents
+20190205,NA,Blank,C1,1,NA,NA,NA,NA
+20190205,NA,Blank,C2,1,NA,NA,NA,NA
 20190205,10,T0,C3,1,Elevated,NA,NA,approx. 4.75 days old - elevated parents
 20190205,10,T0,C4,1,Elevated,NA,NA,approx. 4.75 days old - elevated parents
-20190205,NA,Blank,C5,1,Elevated,NA,NA,approx. 4.75 days old - elevated parents
-20190205,NA,Blank,C6,1,Elevated,NA,NA,approx. 4.75 days old - elevated parents
+20190205,NA,Blank,C5,1,NA,NA,NA,NA
+20190205,NA,Blank,C6,1,NA,NA,NA,NA
 20190205,10,T0,D1,1,Elevated,NA,NA,approx. 4.75 days old - elevated parents
 20190205,10,T0,D2,1,Elevated,NA,NA,approx. 4.75 days old - elevated parents
-20190205,NA,Blank,D3,1,Elevated,NA,NA,approx. 4.75 days old - elevated parents
-20190205,NA,Blank,D4,1,Elevated,NA,NA,approx. 4.75 days old - elevated parents
+20190205,NA,Blank,D3,1,NA,NA,NA,NA
+20190205,NA,Blank,D4,1,NA,NA,NA,NA
 20190205,10,T0,D5,1,Elevated,NA,NA,approx. 4.75 days old - elevated parents
 20190205,10,T0,D6,1,Elevated,NA,NA,approx. 4.75 days old - elevated parents
 20190205,9,T3,A1,2,Elevated,NA,NA,approx. 4.75 days old - elevated parents
 20190205,9,T3,A2,2,Elevated,NA,NA,approx. 4.75 days old - elevated parents
-20190205,NA,Blank,A3,2,Elevated,NA,NA,approx. 4.75 days old - elevated parents
+20190205,NA,Blank,A3,2,NA,NA,NA,NA
 20190205,9,T3,A4,2,Elevated,NA,NA,approx. 4.75 days old - elevated parents
-20190205,NA,Blank,A5,2,Elevated,NA,NA,approx. 4.75 days old - elevated parents
+20190205,NA,Blank,A5,2,NA,NA,NA,NA
 20190205,9,T3,A6,2,Elevated,NA,NA,approx. 4.75 days old - elevated parents
 20190205,9,T3,B1,2,Elevated,NA,NA,approx. 4.75 days old - elevated parents
-20190205,NA,Blank,B2,2,Elevated,NA,NA,approx. 4.75 days old - elevated parents
+20190205,NA,Blank,B2,2,NA,NA,NA,NA
 20190205,9,T3,B3,2,Elevated,NA,NA,approx. 4.75 days old - elevated parents
-20190205,NA,Blank,B4,2,Elevated,NA,NA,approx. 4.75 days old - elevated parents
+20190205,NA,Blank,B4,2,NA,NA,NA,NA
 20190205,9,T3,B5,2,Elevated,NA,NA,approx. 4.75 days old - elevated parents
 20190205,9,T3,B6,2,Elevated,NA,NA,approx. 4.75 days old - elevated parents
 20190205,9,T3,C1,2,Elevated,NA,NA,approx. 4.75 days old - elevated parents
@@ -311,3 +311,219 @@ Date,length_number.individuals,Tank.ID,SDR_position,RUN,Treatment,Treat.initial,
 20190205,9,T3,D4,2,Elevated,NA,NA,approx. 4.75 days old - elevated parents
 20190205,9,T3,D5,2,Elevated,NA,NA,approx. 4.75 days old - elevated parents
 20190205,9,T3,D6,2,Elevated,NA,NA,approx. 4.75 days old - elevated parents
+20190207,4,T1,A1,1,Ambient,NA,NA,approx 6-7 days old - ambient parents
+20190207,4,T1,A2,1,Ambient,NA,NA,approx 6-7 days old - ambient parents
+20190207,4,T1,A3,1,Ambient,NA,NA,approx 6-7 days old - ambient parents
+20190207,4,T1,A4,1,Ambient,NA,NA,approx 6-7 days old - ambient parents
+20190207,4,T1,A5,1,Ambient,NA,NA,approx 6-7 days old - ambient parents
+20190207,4,T1,A6,1,Ambient,NA,NA,approx 6-7 days old - ambient parents
+20190207,4,T1,B1,1,Ambient,NA,NA,approx 6-7 days old - ambient parents
+20190207,4,T1,B2,1,Ambient,NA,NA,approx 6-7 days old - ambient parents
+20190207,NA,Blank,B3,1,NA,NA,NA,NA
+20190207,NA,Blank,B4,1,NA,NA,NA,NA
+20190207,4,T1,B5,1,Ambient,NA,NA,approx 6-7 days old - ambient parents
+20190207,4,T1,B6,1,Ambient,NA,NA,approx 6-7 days old - ambient parents
+20190207,4,T1,C1,1,Ambient,NA,NA,approx 6-7 days old - ambient parents
+20190207,4,T1,C2,1,Ambient,NA,NA,approx 6-7 days old - ambient parents
+20190207,NA,Blank,C3,1,NA,NA,NA,NA
+20190207,NA,Blank,C4,1,NA,NA,NA,NA
+20190207,4,T1,C5,1,Ambient,NA,NA,approx 6-7 days old - ambient parents
+20190207,4,T1,C6,1,Ambient,NA,NA,approx 6-7 days old - ambient parents
+20190207,4,T1,D1,1,Ambient,NA,NA,approx 6-7 days old - ambient parents
+20190207,4,T1,D2,1,Ambient,NA,NA,approx 6-7 days old - ambient parents
+20190207,4,T1,D3,1,Ambient,NA,NA,approx 6-7 days old - ambient parents
+20190207,4,T1,D4,1,Ambient,NA,NA,approx 6-7 days old - ambient parents
+20190207,4,T1,D5,1,Ambient,NA,NA,approx 6-7 days old - ambient parents
+20190207,4,T1,D6,1,Ambient,NA,NA,approx 6-7 days old - ambient parents
+20190207,NA,Blank,A1,2,NA,NA,NA,NA
+20190207,4,T2,A2,2,Ambient,NA,NA,approx 6-7 days old - ambient parents
+20190207,4,T2,A3,2,Ambient,NA,NA,approx 6-7 days old - ambient parents
+20190207,4,T2,A4,2,Ambient,NA,NA,approx 6-7 days old - ambient parents
+20190207,4,T2,A5,2,Ambient,NA,NA,approx 6-7 days old - ambient parents
+20190207,4,T2,A6,2,Ambient,NA,NA,approx 6-7 days old - ambient parents
+20190207,NA,Blank,B1,2,NA,NA,NA,NA
+20190207,4,T2,B2,2,Ambient,NA,NA,approx 6-7 days old - ambient parents
+20190207,4,T2,B3,2,Ambient,NA,NA,approx 6-7 days old - ambient parents
+20190207,4,T2,B4,2,Ambient,NA,NA,approx 6-7 days old - ambient parents
+20190207,4,T2,B5,2,Ambient,NA,NA,approx 6-7 days old - ambient parents
+20190207,4,T2,B6,2,Ambient,NA,NA,approx 6-7 days old - ambient parents
+20190207,NA,Blank,C1,2,NA,NA,NA,NA
+20190207,4,T2,C2,2,Ambient,NA,NA,approx 6-7 days old - ambient parents
+20190207,4,T2,C3,2,Ambient,NA,NA,approx 6-7 days old - ambient parents
+20190207,4,T2,C4,2,Ambient,NA,NA,approx 6-7 days old - ambient parents
+20190207,4,T2,C5,2,Ambient,NA,NA,approx 6-7 days old - ambient parents
+20190207,4,T2,C6,2,Ambient,NA,NA,approx 6-7 days old - ambient parents
+20190207,NA,Blank,D1,2,NA,NA,NA,NA
+20190207,4,T2,D2,2,Ambient,NA,NA,approx 6-7 days old - ambient parents
+20190207,4,T2,D3,2,Ambient,NA,NA,approx 6-7 days old - ambient parents
+20190207,4,T2,D4,2,Ambient,NA,NA,approx 6-7 days old - ambient parents
+20190207,4,T2,D5,2,Ambient,NA,NA,approx 6-7 days old - ambient parents
+20190207,4,T2,D6,2,Ambient,NA,NA,approx 6-7 days old - ambient parents
+20190222,17,T2,A1,1,Ambient,NA,NA,approx. 18-20 hrs old - ambient parents
+20190222,17,T2,A2,1,Ambient,NA,NA,approx. 18-20 hrs old - ambient parents
+20190222,8,T3,A3,1,Elevated,NA,NA,approx. 18-20 hrs old - elevated parents
+20190222,NA,Blank,A4,1,NA,NA,NA,NA
+20190222,2,T0,A5,1,Elevated,NA,NA,approx. 18-20 hrs old - elevated parents
+20190222,2,T0,A6,1,Elevated,NA,NA,approx. 18-20 hrs old - elevated parents
+20190222,17,T2,B1,1,Ambient,NA,NA,approx. 18-20 hrs old - ambient parents
+20190222,8,T3,B2,1,Elevated,NA,NA,approx. 18-20 hrs old - elevated parents
+20190222,8,T3,B3,1,Elevated,NA,NA,approx. 18-20 hrs old - elevated parents
+20190222,NA,Blank,B4,1,NA,NA,NA,NA
+20190222,3,T1,B5,1,Ambient,NA,NA,approx. 18-20 hrs old - ambient parents
+20190222,2,T0,B6,1,Elevated,NA,NA,approx. 18-20 hrs old - elevated parents
+20190222,17,T2,C1,1,Ambient,NA,NA,approx. 18-20 hrs old - ambient parents
+20190222,8,T3,C2,1,Elevated,NA,NA,approx. 18-20 hrs old - elevated parents
+20190222,NA,Blank,C3,1,NA,NA,NA,NA
+20190222,3,T1,C4,1,Ambient,NA,NA,approx. 18-20 hrs old - ambient parents
+20190222,3,T1,C5,1,Ambient,NA,NA,approx. 18-20 hrs old - ambient parents
+20190222,2,T0,C6,1,Elevated,NA,NA,approx. 18-20 hrs old - elevated parents
+20190222,17,T2,D1,1,Ambient,NA,NA,approx. 18-20 hrs old - ambient parents
+20190222,8,T3,D2,1,Elevated,NA,NA,approx. 18-20 hrs old - elevated parents
+20190222,NA,Blank,D3,1,NA,NA,NA,NA
+20190222,3,T1,D4,1,Ambient,NA,NA,approx. 18-20 hrs old - ambient parents
+20190222,3,T1,D5,1,Ambient,NA,NA,approx. 18-20 hrs old - ambient parents
+20190222,2,T0,D6,1,Elevated,NA,NA,approx. 18-20 hrs old - elevated parents
+20190222,NA,Blank,A1,2,NA,NA,NA,NA
+20190222,12,T7,A2,2,Elevated,NA,NA,approx. 18-20 hrs old - elevated parents
+20190222,3,T4,A3,2,Ambient,NA,NA,approx. 18-20 hrs old - ambient parents
+20190222,3,T4,A4,2,Ambient,NA,NA,approx. 18-20 hrs old - ambient parents
+20190222,3,T5,A5,2,Elevated,NA,NA,approx. 18-20 hrs old - elevated parents
+20190222,NA,Blank,A6,2,NA,NA,NA,NA
+20190222,NA,Blank,B1,2,NA,NA,NA,NA
+20190222,12,T7,B2,2,Elevated,NA,NA,approx. 18-20 hrs old - elevated parents
+20190222,3,T4,B3,2,Ambient,NA,NA,approx. 18-20 hrs old - ambient parents
+20190222,3,T5,B4,2,Elevated,NA,NA,approx. 18-20 hrs old - elevated parents
+20190222,3,T5,B5,2,Elevated,NA,NA,approx. 18-20 hrs old - elevated parents
+20190222,14,T6,B6,2,Ambient,NA,NA,approx. 18-20 hrs old - ambient parents
+20190222,NA,Blank,C1,2,NA,NA,NA,NA
+20190222,12,T7,C2,2,Elevated,NA,NA,approx. 18-20 hrs old - elevated parents
+20190222,3,T4,C3,2,Ambient,NA,NA,approx. 18-20 hrs old - ambient parents
+20190222,3,T5,C4,2,Elevated,NA,NA,approx. 18-20 hrs old - elevated parents
+20190222,14,T6,C5,2,Ambient,NA,NA,approx. 18-20 hrs old - ambient parents
+20190222,14,T6,C6,2,Ambient,NA,NA,approx. 18-20 hrs old - ambient parents
+20190222,12,T7,D1,2,Elevated,NA,NA,approx. 18-20 hrs old - elevated parents
+20190222,12,T7,D2,2,Elevated,NA,NA,approx. 18-20 hrs old - elevated parents
+20190222,3,T4,D3,2,Ambient,NA,NA,approx. 18-20 hrs old - ambient parents
+20190222,3,T5,D4,2,Elevated,NA,NA,approx. 18-20 hrs old - elevated parents
+20190222,14,T6,D5,2,Ambient,NA,NA,approx. 18-20 hrs old - ambient parents
+20190222,14,T6,D6,2,Ambient,NA,NA,approx. 18-20 hrs old - ambient parents
+20190322,84,LRT,A1,1,Ambient,NA,NA,"mean size 2,093µm umbone larvae from 5000L LRT"
+20190322,124,LRT,A2,1,Ambient,NA,NA,"mean size 2,093µm umbone larvae from 5000L LRT"
+20190322,30,LRT,A3,1,Ambient,NA,NA,"mean size 2,093µm umbone larvae from 5000L LRT"
+20190322,NA,NA,A4,1,NA,NA,NA,"mean size 2,093µm umbone larvae from 5000L LRT"
+20190322,NA,NA,A5,1,NA,NA,NA,"mean size 2,093µm umbone larvae from 5000L LRT"
+20190322,NA,NA,A6,1,NA,NA,NA,"mean size 2,093µm umbone larvae from 5000L LRT"
+20190322,124,LRT,B1,1,Ambient,NA,NA,"mean size 2,093µm umbone larvae from 5000L LRT"
+20190322,84,LRT,B2,1,Ambient,NA,NA,"mean size 2,093µm umbone larvae from 5000L LRT"
+20190322,NA,Blank,B3,1,NA,NA,NA,"mean size 2,093µm umbone larvae from 5000L LRT"
+20190322,NA,NA,B4,1,NA,NA,NA,"mean size 2,093µm umbone larvae from 5000L LRT"
+20190322,NA,NA,B5,1,NA,NA,NA,"mean size 2,093µm umbone larvae from 5000L LRT"
+20190322,NA,NA,B6,1,NA,NA,NA,"mean size 2,093µm umbone larvae from 5000L LRT"
+20190322,NA,Blank,C1,1,NA,NA,NA,"mean size 2,093µm umbone larvae from 5000L LRT"
+20190322,NA,Blank,C2,1,NA,NA,NA,"mean size 2,093µm umbone larvae from 5000L LRT"
+20190322,84,LRT,C3,1,Ambient,NA,NA,"mean size 2,093µm umbone larvae from 5000L LRT"
+20190322,NA,NA,C4,1,NA,NA,NA,"mean size 2,093µm umbone larvae from 5000L LRT"
+20190322,NA,NA,C5,1,NA,NA,NA,"mean size 2,093µm umbone larvae from 5000L LRT"
+20190322,NA,NA,C6,1,NA,NA,NA,"mean size 2,093µm umbone larvae from 5000L LRT"
+20190322,NA,Blank,D1,1,NA,NA,NA,"mean size 2,093µm umbone larvae from 5000L LRT"
+20190322,NA,Blank,D2,1,NA,NA,NA,"mean size 2,093µm umbone larvae from 5000L LRT"
+20190322,NA,NA,D3,1,NA,NA,NA,"mean size 2,093µm umbone larvae from 5000L LRT"
+20190322,NA,NA,D4,1,NA,NA,NA,"mean size 2,093µm umbone larvae from 5000L LRT"
+20190322,NA,NA,D5,1,NA,NA,NA,"mean size 2,093µm umbone larvae from 5000L LRT"
+20190322,NA,NA,D6,1,NA,NA,NA,"mean size 2,093µm umbone larvae from 5000L LRT"
+20190325,11,T0,A1,1,Elevated,NA,NA,50% D-hinge - elevated parents
+20190325,11,T0,A2,1,Elevated,NA,NA,50% D-hinge - elevated parents
+20190325,11,T0,A3,1,Elevated,NA,NA,50% D-hinge - elevated parents
+20190325,11,T0,A4,1,Elevated,NA,NA,50% D-hinge - elevated parents
+20190325,11,T0,A5,1,Elevated,NA,NA,50% D-hinge - elevated parents
+20190325,11,T0,A6,1,Elevated,NA,NA,50% D-hinge - elevated parents
+20190325,11,T0,B1,1,Elevated,NA,NA,50% D-hinge - elevated parents
+20190325,11,T0,B2,1,Elevated,NA,NA,50% D-hinge - elevated parents
+20190325,11,T0,B3,1,Elevated,NA,NA,50% D-hinge - elevated parents
+20190325,11,T0,B4,1,Elevated,NA,NA,50% D-hinge - elevated parents
+20190325,11,T0,B5,1,Elevated,NA,NA,50% D-hinge - elevated parents
+20190325,11,T0,B6,1,Elevated,NA,NA,50% D-hinge - elevated parents
+20190325,11,T0,C1,1,Elevated,NA,NA,50% D-hinge - elevated parents
+20190325,11,T0,C2,1,Elevated,NA,NA,50% D-hinge - elevated parents
+20190325,NA,Blank,C3,1,NA,NA,NA,NA
+20190325,NA,Blank,C4,1,NA,NA,NA,NA
+20190325,NA,Blank,C5,1,NA,NA,NA,NA
+20190325,NA,Blank,C6,1,NA,NA,NA,NA
+20190325,NA,Blank,D1,1,NA,NA,NA,NA
+20190325,NA,Blank,D2,1,NA,NA,NA,NA
+20190325,NA,Blank,D3,1,NA,NA,NA,NA
+20190325,NA,Blank,D4,1,NA,NA,NA,NA
+20190325,NA,Blank,D5,1,NA,NA,NA,NA
+20190325,NA,Blank,D6,1,NA,NA,NA,NA
+20190325,11,T1,A1,2,Ambient,NA,NA,88% D-hinge - ambient parents
+20190325,11,T1,A2,2,Ambient,NA,NA,88% D-hinge - ambient parents
+20190325,11,T1,A3,2,Ambient,NA,NA,88% D-hinge - ambient parents
+20190325,11,T1,A4,2,Ambient,NA,NA,88% D-hinge - ambient parents
+20190325,11,T1,A5,2,Ambient,NA,NA,88% D-hinge - ambient parents
+20190325,NA,Blank,A6,2,NA,NA,NA,NA
+20190325,11,T1,B1,2,Ambient,NA,NA,88% D-hinge - ambient parents
+20190325,11,T1,B2,2,Ambient,NA,NA,88% D-hinge - ambient parents
+20190325,11,T1,B3,2,Ambient,NA,NA,88% D-hinge - ambient parents
+20190325,11,T1,B4,2,Ambient,NA,NA,88% D-hinge - ambient parents
+20190325,11,T1,B5,2,Ambient,NA,NA,88% D-hinge - ambient parents
+20190325,NA,Blank,B6,2,NA,NA,NA,NA
+20190325,11,T1,C1,2,Ambient,NA,NA,88% D-hinge - ambient parents
+20190325,11,T1,C2,2,Ambient,NA,NA,88% D-hinge - ambient parents
+20190325,11,T1,C3,2,Ambient,NA,NA,88% D-hinge - ambient parents
+20190325,11,T1,C4,2,Ambient,NA,NA,88% D-hinge - ambient parents
+20190325,11,T1,C5,2,Ambient,NA,NA,88% D-hinge - ambient parents
+20190325,NA,Blank,C6,2,NA,NA,NA,NA
+20190325,11,T1,D1,2,Ambient,NA,NA,88% D-hinge - ambient parents
+20190325,11,T1,D2,2,Ambient,NA,NA,88% D-hinge - ambient parents
+20190325,11,T1,D3,2,Ambient,NA,NA,88% D-hinge - ambient parents
+20190325,11,T1,D4,2,Ambient,NA,NA,88% D-hinge - ambient parents
+20190325,11,T1,D5,2,Ambient,NA,NA,88% D-hinge - ambient parents
+20190325,NA,Blank,D6,2,NA,NA,NA,NA
+20190325,NA,Blank,A1,3,NA,NA,NA,NA
+20190325,NA,Blank,A2,3,NA,NA,NA,NA
+20190325,NA,Blank,A3,3,NA,NA,NA,NA
+20190325,NA,Blank,A4,3,NA,NA,NA,NA
+20190325,10,T2,A5,3,Ambient,NA,NA,100% D-hinge - ambient parents
+20190325,10,T2,A6,3,Ambient,NA,NA,100% D-hinge - ambient parents
+20190325,10,T2,B1,3,Ambient,NA,NA,100% D-hinge - ambient parents
+20190325,10,T2,B2,3,Ambient,NA,NA,100% D-hinge - ambient parents
+20190325,10,T2,B3,3,Ambient,NA,NA,100% D-hinge - ambient parents
+20190325,10,T2,B4,3,Ambient,NA,NA,100% D-hinge - ambient parents
+20190325,10,T2,B5,3,Ambient,NA,NA,100% D-hinge - ambient parents
+20190325,10,T2,B6,3,Ambient,NA,NA,100% D-hinge - ambient parents
+20190325,10,T2,C1,3,Ambient,NA,NA,100% D-hinge - ambient parents
+20190325,10,T2,C2,3,Ambient,NA,NA,100% D-hinge - ambient parents
+20190325,10,T2,C3,3,Ambient,NA,NA,100% D-hinge - ambient parents
+20190325,10,T2,C4,3,Ambient,NA,NA,100% D-hinge - ambient parents
+20190325,10,T2,C5,3,Ambient,NA,NA,100% D-hinge - ambient parents
+20190325,10,T2,C6,3,Ambient,NA,NA,100% D-hinge - ambient parents
+20190325,10,T2,D1,3,Ambient,NA,NA,100% D-hinge - ambient parents
+20190325,10,T2,D2,3,Ambient,NA,NA,100% D-hinge - ambient parents
+20190325,10,T2,D3,3,Ambient,NA,NA,100% D-hinge - ambient parents
+20190325,10,T2,D4,3,Ambient,NA,NA,100% D-hinge - ambient parents
+20190325,10,T2,D5,3,Ambient,NA,NA,100% D-hinge - ambient parents
+20190325,10,T2,D6,3,Ambient,NA,NA,100% D-hinge - ambient parents
+20190325,9,T3,A1,4,Elevated,NA,NA,100% D-hinge - elevated parents
+20190325,9,T3,A2,4,Elevated,NA,NA,100% D-hinge - elevated parents
+20190325,9,T3,A3,4,Elevated,NA,NA,100% D-hinge - elevated parents
+20190325,9,T3,A4,4,Elevated,NA,NA,100% D-hinge - elevated parents
+20190325,9,T3,A5,4,Elevated,NA,NA,100% D-hinge - elevated parents
+20190325,9,T3,A6,4,Elevated,NA,NA,100% D-hinge - elevated parents
+20190325,9,T3,B1,4,Elevated,NA,NA,100% D-hinge - elevated parents
+20190325,NA,Blank,B2,4,NA,NA,NA,NA
+20190325,NA,Blank,B3,4,NA,NA,NA,NA
+20190325,NA,Blank,B4,4,NA,NA,NA,NA
+20190325,NA,Blank,B5,4,NA,NA,NA,NA
+20190325,9,T3,B6,4,Elevated,NA,NA,100% D-hinge - elevated parents
+20190325,9,T3,C1,4,Elevated,NA,NA,100% D-hinge - elevated parents
+20190325,9,T3,C2,4,Elevated,NA,NA,100% D-hinge - elevated parents
+20190325,9,T3,C3,4,Elevated,NA,NA,100% D-hinge - elevated parents
+20190325,9,T3,C4,4,Elevated,NA,NA,100% D-hinge - elevated parents
+20190325,9,T3,C5,4,Elevated,NA,NA,100% D-hinge - elevated parents
+20190325,9,T3,C6,4,Elevated,NA,NA,100% D-hinge - elevated parents
+20190325,9,T3,D1,4,Elevated,NA,NA,100% D-hinge - elevated parents
+20190325,9,T3,D2,4,Elevated,NA,NA,100% D-hinge - elevated parents
+20190325,9,T3,D3,4,Elevated,NA,NA,100% D-hinge - elevated parents
+20190325,9,T3,D4,4,Elevated,NA,NA,100% D-hinge - elevated parents
+20190325,9,T3,D5,4,Elevated,NA,NA,100% D-hinge - elevated parents
+20190325,9,T3,D6,4,Elevated,NA,NA,100% D-hinge - elevated parents
