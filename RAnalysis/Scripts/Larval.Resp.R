@@ -1,7 +1,7 @@
 #Title: Larval Resp. LoLin script
 #Author: Sam Gurr & HM Putnam
 #Edited by: Sam Gurr
-#Date Last Modified: 20190324
+#Date Last Modified: 20190329
 #See Readme file for details
 
 rm(list=ls()) #clears workspace 
@@ -48,25 +48,27 @@ a <- 0.4
 ouputNAME<-"Data/SDR_data/Cumulative_resp_alpha0.4.csv" 
 
 
-# bring in the respiration file names
+# bring in the respiration file names CHANGE LINE 53 TO RUN NEW DATASETS
 file.names.full<-basename(list.files(path = path.p, pattern = "csv$", recursive = TRUE)) #list all csv file names in the folder and subfolders
-file.names <- file.names.full[c(20:23)] # call the files you want to analyze and rbind to the current cumunaltive file
+file.names <- file.names.full[c(1:2)] # call the files you want to analyze and rbind to the current cumunaltive file
 file.names # look at the names of the csv files you will call in the following for loop
+
 #generate a 3 column dataframe with specific column names
 #Resp.R <- data.frame(matrix(NA, nrow=length(file.names)*2, ncol=3))
 #colnames(Resp.R) <- c("Sample.ID","Intercept", "umol.L.sec")
-
 #includes treatment, tank, chamber volume, animal size/number etc for normalization
+
 df_total <- data.frame() # start dataframe 
 resp.table <- data.frame(matrix(nrow = 1, ncol = 7)) # create dataframe to save cumunalitively during for loop
 colnames(resp.table)<-c('Date', 'RUN', 'SDR_position', 'Lpc', 'Leq' , 'Lz', 'alpha') # names for comuns in the for loop
 
 for(i in 1:length(file.names)) { # for every file in list start at the first and run this following function
-  Resp.Data <-read.table(file.path(path.p,file.names[i]), skip = 56, header=T, sep=",", na.string="NA", fill = TRUE, as.is=TRUE, fileEncoding="latin1") #reads in the data files
+  Resp.Data <-read.table(file.path(path.p,file.names[2]), skip = 56, header=T, sep=",", na.string="NA", fill = TRUE, as.is=TRUE, fileEncoding="latin1") #reads in the data files
   Resp.Data$Time.Min. <- seq.int(0.017, (nrow(Resp.Data))*0.25, by=0.25) #set time in min
   #Resp.Data[Resp.Data[,] == "No Sensor"] <- as.numeric(runif(nrow(Resp.Data), min=0, max=300)) #convert any vials with no data
   Resp.Data <- Resp.Data[,2:27] #use only res values - 24 total in the 24 well plate (SDR SensorDish)
-  
+  # Resp.Data <- Resp.Data[20:89,] # truncated for 5-20 minnute record (used for juv geoduck 20190116)
+  # tail(Resp.Data) # check the dataset
 
   for(j in 2:(ncol(Resp.Data)-1)){
     model <- rankLocReg(
