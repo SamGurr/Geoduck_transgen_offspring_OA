@@ -527,3 +527,75 @@ Date,length_number.individuals,Tank.ID,SDR_position,RUN,Treatment,Treat.initial,
 20190325,9,T3,D4,4,Elevated,NA,NA,100% D-hinge - elevated parents
 20190325,9,T3,D5,4,Elevated,NA,NA,100% D-hinge - elevated parents
 20190325,9,T3,D6,4,Elevated,NA,NA,100% D-hinge - elevated parents
+20190329,5,T1,A1,1,Ambient,NA,NA,91.66% D-hinge - ambient parents
+20190329,5,T1,A2,1,Ambient,NA,NA,91.66% D-hinge - ambient parents
+20190329,5,T1,A3,1,Ambient,NA,NA,91.66% D-hinge - ambient parents
+20190329,5,T1,A4,1,Ambient,NA,NA,91.66% D-hinge - ambient parents
+20190329,5,T1,A5,1,Ambient,NA,NA,91.66% D-hinge - ambient parents
+20190329,5,T1,A6,1,Ambient,NA,NA,91.66% D-hinge - ambient parents
+20190329,5,T1,B1,1,Ambient,NA,NA,91.66% D-hinge - ambient parents
+20190329,5,T1,B2,1,Ambient,NA,NA,91.66% D-hinge - ambient parents
+20190329,5,T1,B3,1,Ambient,NA,NA,91.66% D-hinge - ambient parents
+20190329,5,T1,B4,1,Ambient,NA,NA,91.66% D-hinge - ambient parents
+20190329,5,T1,B5,1,Ambient,NA,NA,91.66% D-hinge - ambient parents
+20190329,5,T1,B6,1,Ambient,NA,NA,91.66% D-hinge - ambient parents
+20190329,NA,Blank,C1,1,NA,NA,NA,NA
+20190329,NA,Blank,C2,1,NA,NA,NA,NA
+20190329,5,T1,C3,1,Ambient,NA,NA,91.66% D-hinge - ambient parents
+20190329,5,T1,C4,1,Ambient,NA,NA,91.66% D-hinge - ambient parents
+20190329,5,T1,C5,1,Ambient,NA,NA,91.66% D-hinge - ambient parents
+20190329,5,T1,C6,1,Ambient,NA,NA,91.66% D-hinge - ambient parents
+20190329,NA,Blank,D1,1,NA,NA,NA,NA
+20190329,NA,Blank,D2,1,NA,NA,NA,NA
+20190329,5,T1,D3,1,Ambient,NA,NA,91.66% D-hinge - ambient parents
+20190329,5,T1,D4,1,Ambient,NA,NA,91.66% D-hinge - ambient parents
+20190329,5,T1,D5,1,Ambient,NA,NA,91.66% D-hinge - ambient parents
+20190329,5,T1,D6,1,Ambient,NA,NA,91.66% D-hinge - ambient parents
+20190329,10,T2,A1,2,Ambient,NA,NA,100% D-hinge - ambient parents
+20190329,10,T2,A2,2,Ambient,NA,NA,100% D-hinge - ambient parents
+20190329,10,T2,A3,2,Ambient,NA,NA,100% D-hinge - ambient parents
+20190329,10,T2,A4,2,Ambient,NA,NA,100% D-hinge - ambient parents
+20190329,NA,Blank,A5,2,NA,NA,NA,NA
+20190329,10,T2,A6,2,Ambient,NA,NA,100% D-hinge - ambient parents
+20190329,10,T2,B1,2,Ambient,NA,NA,100% D-hinge - ambient parents
+20190329,10,T2,B2,2,Ambient,NA,NA,100% D-hinge - ambient parents
+20190329,10,T2,B3,2,Ambient,NA,NA,100% D-hinge - ambient parents
+20190329,10,T2,B4,2,Ambient,NA,NA,100% D-hinge - ambient parents
+20190329,NA,Blank,B5,2,NA,NA,NA,NA
+20190329,10,T2,B6,2,Ambient,NA,NA,100% D-hinge - ambient parents
+20190329,10,T2,C1,2,Ambient,NA,NA,100% D-hinge - ambient parents
+20190329,10,T2,C2,2,Ambient,NA,NA,100% D-hinge - ambient parents
+20190329,10,T2,C3,2,Ambient,NA,NA,100% D-hinge - ambient parents
+20190329,10,T2,C4,2,Ambient,NA,NA,100% D-hinge - ambient parents
+20190329,NA,Blank,C5,2,NA,NA,NA,NA
+20190329,10,T2,C6,2,Ambient,NA,NA,100% D-hinge - ambient parents
+20190329,10,T2,D1,2,Ambient,NA,NA,100% D-hinge - ambient parents
+20190329,10,T2,D2,2,Ambient,NA,NA,100% D-hinge - ambient parents
+20190329,10,T2,D3,2,Ambient,NA,NA,100% D-hinge - ambient parents
+20190329,10,T2,D4,2,Ambient,NA,NA,100% D-hinge - ambient parents
+20190329,NA,Blank,D5,2,NA,NA,NA,NA
+20190329,10,T2,D6,2,Ambient,NA,NA,100% D-hinge - ambient parents
+20190329,NA,Blank,A1,3,NA,NA,NA,NA
+20190329,11,T3,A2,3,Elevated,NA,NA,100% D-hinge - elevated parents
+20190329,11,T3,A3,3,Elevated,NA,NA,100% D-hinge - elevated parents
+20190329,11,T3,A4,3,Elevated,NA,NA,100% D-hinge - elevated parents
+20190329,11,T3,A5,3,Elevated,NA,NA,100% D-hinge - elevated parents
+20190329,11,T3,A6,3,Elevated,NA,NA,100% D-hinge - elevated parents
+20190329,NA,Blank,B1,3,NA,NA,NA,NA
+20190329,11,T3,B2,3,Elevated,NA,NA,100% D-hinge - elevated parents
+20190329,11,T3,B3,3,Elevated,NA,NA,100% D-hinge - elevated parents
+20190329,11,T3,B4,3,Elevated,NA,NA,100% D-hinge - elevated parents
+20190329,11,T3,B5,3,Elevated,NA,NA,100% D-hinge - elevated parents
+20190329,11,T3,B6,3,Elevated,NA,NA,100% D-hinge - elevated parents
+20190329,NA,Blank,C1,3,NA,NA,NA,NA
+20190329,11,T3,C2,3,Elevated,NA,NA,100% D-hinge - elevated parents
+20190329,11,T3,C3,3,Elevated,NA,NA,100% D-hinge - elevated parents
+20190329,11,T3,C4,3,Elevated,NA,NA,100% D-hinge - elevated parents
+20190329,11,T3,C5,3,Elevated,NA,NA,100% D-hinge - elevated parents
+20190329,11,T3,C6,3,Elevated,NA,NA,100% D-hinge - elevated parents
+20190329,NA,Blank,D1,3,NA,NA,NA,NA
+20190329,11,T3,D2,3,Elevated,NA,NA,100% D-hinge - elevated parents
+20190329,11,T3,D3,3,Elevated,NA,NA,100% D-hinge - elevated parents
+20190329,11,T3,D4,3,Elevated,NA,NA,100% D-hinge - elevated parents
+20190329,11,T3,D5,3,Elevated,NA,NA,100% D-hinge - elevated parents
+20190329,11,T3,D6,3,Elevated,NA,NA,100% D-hinge - elevated parents
