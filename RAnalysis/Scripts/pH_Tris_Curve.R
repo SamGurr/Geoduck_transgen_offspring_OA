@@ -2,7 +2,7 @@
 # last modification on 20180629 by SJG
 setwd("C:/Users/samjg/Documents/My_Projects/Geoduck_transgen_offspring_OA/RAnalysis/Data/pH_Calibration_Files/") #set working directory
 
-Calib.Data <-read.table("20190319.csv", header=TRUE, sep=",", na.string="NA", as.is=TRUE) #reads in the data files
+Calib.Data <-read.table("20190329.csv", header=TRUE, sep=",", na.string="NA", as.is=TRUE) #reads in the data files
 model <-lm(mVTris ~ TTris, data=Calib.Data) #runs a linear regression of mV as a function of temperature
 coe <- coef(model) #extracts the coeffecients
 R2<-summary(model)$r.squared

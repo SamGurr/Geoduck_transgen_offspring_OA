@@ -297,3 +297,15 @@ Date,Calib.Date,Time,Sample.ID,Treatment,Temperature,pH.MV,Salinity,Notes
 20190319,20190319,9:50,5B,Oscillating,11.981,-49.3,28.75,
 20190319,20190319,9:50,6B,Ambient,11.878,-48.4,28.75,
 20190319,20190319,9:50,T4,na,11.863,-9.9,28.71,Test true pH with APEX at 6.9. TA samples same day
+20190408,20190408,11:45,T1,Ambient,13.012,-53.4,28.78,TA samples same day
+20190408,20190408,11:45,T2,Ambient,12.878,-54,28.94,TA samples same day
+20190408,20190408,11:45,T3,Ambient,12.85,-54.2,28.97,TA samples same day
+20190408,20190408,11:45,T5,Elevated,12.862,-20.9,28.97,
+20190408,20190408,11:45,H1,Elevated,12.282,-24.8,29.06,TA samples same day
+20190408,20190408,11:45,H2,Ambient,12.377,-53.2,28.94,TA samples same day
+20190408,20190408,11:45,H3,Elevated,12.989,-23,28.99,TA samples same day
+20190408,20190408,11:45,H4,Ambient,12.9,-54.1,28.98,TA samples same day
+20190408,20190408,11:45,H5,Elevated,12.992,-23,29,TA samples same day
+20190408,20190408,11:45,H6,Ambient,12.9,-53.2,28.99,TA samples same day
+20190408,20190408,11:45,H7,Elevated,12.824,-25.2,29,TA samples same day
+20190408,20190408,11:45,H8,Ambient,12.9,-53.5,28.94,TA samples same day

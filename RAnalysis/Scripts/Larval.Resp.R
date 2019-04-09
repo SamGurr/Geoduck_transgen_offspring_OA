@@ -50,7 +50,7 @@ ouputNAME<-"Data/SDR_data/Cumulative_resp_alpha0.4.csv"
 
 # bring in the respiration file names CHANGE LINE 53 TO RUN NEW DATASETS
 file.names.full<-basename(list.files(path = path.p, pattern = "csv$", recursive = TRUE)) #list all csv file names in the folder and subfolders
-file.names <- file.names.full[c(1:2)] # call the files you want to analyze and rbind to the current cumunaltive file
+file.names <- file.names.full[c(30:32)] # call the files you want to analyze and rbind to the current cumunaltive file
 file.names # look at the names of the csv files you will call in the following for loop
 
 #generate a 3 column dataframe with specific column names
@@ -63,7 +63,7 @@ resp.table <- data.frame(matrix(nrow = 1, ncol = 7)) # create dataframe to save 
 colnames(resp.table)<-c('Date', 'RUN', 'SDR_position', 'Lpc', 'Leq' , 'Lz', 'alpha') # names for comuns in the for loop
 
 for(i in 1:length(file.names)) { # for every file in list start at the first and run this following function
-  Resp.Data <-read.table(file.path(path.p,file.names[2]), skip = 56, header=T, sep=",", na.string="NA", fill = TRUE, as.is=TRUE, fileEncoding="latin1") #reads in the data files
+  Resp.Data <-read.table(file.path(path.p,file.names[i]), skip = 56, header=T, sep=",", na.string="NA", fill = TRUE, as.is=TRUE, fileEncoding="latin1") #reads in the data files
   Resp.Data$Time.Min. <- seq.int(0.017, (nrow(Resp.Data))*0.25, by=0.25) #set time in min
   #Resp.Data[Resp.Data[,] == "No Sensor"] <- as.numeric(runif(nrow(Resp.Data), min=0, max=300)) #convert any vials with no data
   Resp.Data <- Resp.Data[,2:27] #use only res values - 24 total in the 24 well plate (SDR SensorDish)

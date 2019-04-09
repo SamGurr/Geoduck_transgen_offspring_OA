@@ -1,0 +1,10 @@
+sample,mass,salinity,Sample.ID,Type, Notes
+20190408_T1,60.6422,28.78,T1,conical,
+20190408_T2,59.2532,28.94,T2,conical,
+20190408_T3,59.3959,28.97,T3,conical,
+20190408_H1,60.6342,29.06,H1,heathtray,
+20190408_H3,60.4455,28.99,H3,heathtray,
+20190408_H5,59.1255,29,H5,heathtray,
+20190408_H7,60.8758,29,H7,heathtray,
+20190408_H2,59.9451,28.94,H2,heathtray,
+20190408_H4,60.5993,29.98,H4,heathtray,
