@@ -743,3 +743,75 @@ Date,length_number.individuals,Tank.ID,SDR_position,RUN,Treatment,Treat.initial,
 20190406,7,T3,D4,3,Elevated,NA,NA,100% D-hinge - elevated parents
 20190406,7,T3,D5,3,Elevated,NA,NA,100% D-hinge - elevated parents
 20190406,7,T3,D6,3,Elevated,NA,NA,100% D-hinge - elevated parents
+20190410,6,T1,A1,1,Ambient,NA,NA,100% D-hinge - ambient parents
+20190410,6,T1,A2,1,Ambient,NA,NA,100% D-hinge - ambient parents
+20190410,6,T1,A3,1,Ambient,NA,NA,100% D-hinge - ambient parents
+20190410,NA,Blank,A4,1,NA,NA,NA,NA
+20190410,6,T1,A5,1,Ambient,NA,NA,100% D-hinge - ambient parents
+20190410,6,T1,A6,1,Ambient,NA,NA,100% D-hinge - ambient parents
+20190410,6,T1,B1,1,Ambient,NA,NA,100% D-hinge - ambient parents
+20190410,6,T1,B2,1,Ambient,NA,NA,100% D-hinge - ambient parents
+20190410,6,T1,B3,1,Ambient,NA,NA,100% D-hinge - ambient parents
+20190410,NA,Blank,B4,1,NA,NA,NA,NA
+20190410,6,T1,B5,1,Ambient,NA,NA,100% D-hinge - ambient parents
+20190410,6,T1,B6,1,Ambient,NA,NA,100% D-hinge - ambient parents
+20190410,6,T1,C1,1,Ambient,NA,NA,100% D-hinge - ambient parents
+20190410,6,T1,C2,1,Ambient,NA,NA,100% D-hinge - ambient parents
+20190410,6,T1,C3,1,Ambient,NA,NA,100% D-hinge - ambient parents
+20190410,NA,Blank,C4,1,NA,NA,NA,NA
+20190410,6,T1,C5,1,Ambient,NA,NA,100% D-hinge - ambient parents
+20190410,6,T1,C6,1,Ambient,NA,NA,100% D-hinge - ambient parents
+20190410,6,T1,D1,1,Ambient,NA,NA,100% D-hinge - ambient parents
+20190410,6,T1,D2,1,Ambient,NA,NA,100% D-hinge - ambient parents
+20190410,6,T1,D3,1,Ambient,NA,NA,100% D-hinge - ambient parents
+20190410,NA,Blank,D4,1,NA,NA,NA,NA
+20190410,6,T1,D5,1,Ambient,NA,NA,100% D-hinge - ambient parents
+20190410,6,T1,D6,1,Ambient,NA,NA,100% D-hinge - ambient parents
+20190410,NA,Blank,A1,2,NA,NA,NA,NA
+20190410,13,T3,A2,2,Elevated,NA,NA,100% D-hinge - elevated parents
+20190410,13,T3,A3,2,Elevated,NA,NA,100% D-hinge - elevated parents
+20190410,13,T3,A4,2,Elevated,NA,NA,100% D-hinge - elevated parents
+20190410,13,T3,A5,2,Elevated,NA,NA,100% D-hinge - elevated parents
+20190410,13,T3,A6,2,Elevated,NA,NA,100% D-hinge - elevated parents
+20190410,NA,Blank,B1,2,NA,NA,NA,NA
+20190410,13,T3,B2,2,Elevated,NA,NA,100% D-hinge - elevated parents
+20190410,13,T3,B3,2,Elevated,NA,NA,100% D-hinge - elevated parents
+20190410,13,T3,B4,2,Elevated,NA,NA,100% D-hinge - elevated parents
+20190410,13,T3,B5,2,Elevated,NA,NA,100% D-hinge - elevated parents
+20190410,13,T3,B6,2,Elevated,NA,NA,100% D-hinge - elevated parents
+20190410,NA,Blank,C1,2,NA,NA,NA,NA
+20190410,13,T3,C2,2,Elevated,NA,NA,100% D-hinge - elevated parents
+20190410,13,T3,C3,2,Elevated,NA,NA,100% D-hinge - elevated parents
+20190410,13,T3,C4,2,Elevated,NA,NA,100% D-hinge - elevated parents
+20190410,13,T3,C5,2,Elevated,NA,NA,100% D-hinge - elevated parents
+20190410,13,T3,C6,2,Elevated,NA,NA,100% D-hinge - elevated parents
+20190410,NA,Blank,D1,2,NA,NA,NA,NA
+20190410,13,T3,D2,2,Elevated,NA,NA,100% D-hinge - elevated parents
+20190410,13,T3,D3,2,Elevated,NA,NA,100% D-hinge - elevated parents
+20190410,13,T3,D4,2,Elevated,NA,NA,100% D-hinge - elevated parents
+20190410,13,T3,D5,2,Elevated,NA,NA,100% D-hinge - elevated parents
+20190410,13,T3,D6,2,Elevated,NA,NA,100% D-hinge - elevated parents
+20190418,2,T1,A1,1,Ambient,NA,NA,
+20190418,2,T1,A2,1,Ambient,NA,NA,
+20190418,2,T1,A3,1,Ambient,NA,NA,
+20190418,2,T3,A4,1,Elevated,NA,NA,
+20190418,2,T3,A5,1,Elevated,NA,NA,
+20190418,NA,Blank,A6,1,NA,NA,NA,NA
+20190418,2,T1,B1,1,Ambient,NA,NA,
+20190418,2,T1,B2,1,Ambient,NA,NA,
+20190418,2,T1,B3,1,Ambient,NA,NA,
+20190418,2,T3,B4,1,Elevated,NA,NA,
+20190418,2,T3,B5,1,Elevated,NA,NA,
+20190418,NA,Blank,B6,1,NA,NA,NA,NA
+20190418,2,T1,C1,1,Ambient,NA,NA,
+20190418,2,T1,C2,1,Ambient,NA,NA,
+20190418,2,T3,C3,1,Elevated,NA,NA,
+20190418,2,T3,C4,1,Elevated,NA,NA,
+20190418,2,T3,C5,1,Elevated,NA,NA,
+20190418,NA,Blank,C6,1,NA,NA,NA,NA
+20190418,2,T1,D1,1,Ambient,NA,NA,
+20190418,2,T1,D2,1,Ambient,NA,NA,
+20190418,2,T3,D3,1,Elevated,NA,NA,
+20190418,2,T3,D4,1,Elevated,NA,NA,
+20190418,2,T3,D5,1,Elevated,NA,NA,
+20190418,NA,Blank,D6,1,NA,NA,NA,NA
