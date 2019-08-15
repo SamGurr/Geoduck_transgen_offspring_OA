@@ -1,14 +1,13 @@
 #Title: Larval Resp. LoLin script
 #Author: Sam Gurr & HM Putnam
 #Edited by: Sam Gurr
-#Date Last Modified: 20190329
+#Date Last Modified: 20190425 (ran LoLin for the 20190418 data)
 #See Readme file for details
 
 rm(list=ls()) #clears workspace 
 
 ## install packages if you dont already have them in your library
 if ("devtools" %in% rownames(installed.packages()) == 'FALSE') install.packages('devtools') 
-library(devtools)
 if ("segmented" %in% rownames(installed.packages()) == 'FALSE') install.packages('segmented') 
 if ("plotrix" %in% rownames(installed.packages()) == 'FALSE') install.packages('plotrix') 
 if ("gridExtra" %in% rownames(installed.packages()) == 'FALSE') install.packages('gridExtra') 
@@ -50,7 +49,7 @@ ouputNAME<-"Data/SDR_data/Cumulative_resp_alpha0.4.csv"
 
 # bring in the respiration file names CHANGE LINE 53 TO RUN NEW DATASETS
 file.names.full<-basename(list.files(path = path.p, pattern = "csv$", recursive = TRUE)) #list all csv file names in the folder and subfolders
-file.names <- file.names.full[c(30:32)] # call the files you want to analyze and rbind to the current cumunaltive file
+file.names <- file.names.full[c(35)] # call the files you want to analyze and rbind to the current cumunaltive file
 file.names # look at the names of the csv files you will call in the following for loop
 
 #generate a 3 column dataframe with specific column names

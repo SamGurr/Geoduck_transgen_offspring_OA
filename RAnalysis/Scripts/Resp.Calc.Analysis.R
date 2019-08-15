@@ -17,7 +17,8 @@ if ("lubridate" %in% rownames(installed.packages()) == 'FALSE') install.packages
 if ("chron" %in% rownames(installed.packages()) == 'FALSE') install.packages('chron') 
 if ("plyr" %in% rownames(installed.packages()) == 'FALSE') install.packages('plyr') 
 if ("dplyr" %in% rownames(installed.packages()) == 'FALSE') install.packages('dplyr') 
-
+if ("lmtest" %in% rownames(installed.packages()) == 'FALSE') install.packages('lmtest') 
+if ("car" %in% rownames(installed.packages()) == 'FALSE') install.packages('car') 
 
 #Read in required libraries
 ##### Include Versions of libraries
@@ -31,6 +32,8 @@ library("lubridate")
 library("chron")
 library('plyr')
 library('dplyr')
+library('car')
+library('lmtest')
 
 # Set Working Directory:
 # setwd("~/MyProjects/Geoduck_Conditioning/RAnalysis/") #set working
@@ -50,8 +53,117 @@ x <- merge(cumulative_resp_table, Sample.Info, by=c("Date","SDR_position", "RUN"
 
 
 
+# Pediveliger fifth drop respiration 20190418 #----------------------------------------------
 
+Pediveligerresp_20190418<- x %>% 
+  filter((substr(x$Date, 1,9)) == "20190418") # call only resp values of juveniles
+
+# Run 1 T1_T3 ---------------
+Pediveligerresp_T1_T3 <- Pediveligerresp_20190418 %>%
+  filter((Pediveligerresp_20190418$RUN) == 1)# call only resp values of juveniles
+PediveligerT1_T3resp_blanks <- Pediveligerresp_T1_T3 %>%  filter(Pediveligerresp_T1_T3$Tank.ID == "Blank") # call only blanks
+PediveligerT1_T3resp_blankMEANS <- PediveligerT1_T3resp_blanks %>% 
+  summarise(mean_Lpc = mean(abs(Lpc)),mean_Leq = mean(abs(Leq)), mean_Lz = mean(abs(Lz))) # summarize the blanks into a mean value
+
+PediveligerT1_T3resp_geoduck_7 <- Pediveligerresp_T1_T3 %>% 
+  filter(!is.na(length_number.individuals)) # remove the NAs from the number of individuals (these are the blanks)
+
+PediveligerT1_T3resp_geoduck_7$Resp_rate_ug.mol <-
+  ((((((abs(PediveligerT1_T3resp_geoduck_7$Lpc)) - (PediveligerT1_T3resp_blankMEANS$mean_Lpc))*(0.08/1000))*(60))*31.998)/(PediveligerT1_T3resp_geoduck_7$length_number.individuals))
+PediveligerT1_T3resp_geoduck_7$Resp_rate_ug.mol # units in ug O2/hr/individual
+
+PediveligerT1_T3resp_geoduck_7 <- PediveligerT1_T3resp_geoduck_7 %>%
+  filter(PediveligerT1_T3resp_geoduck_7$Resp_rate_ug.mol > 0)
+
+PediveligerT1_T3resp_table_treatments_ALL <- PediveligerT1_T3resp_geoduck_7 %>%
+  #filter(PediveligerT1_T3resp_geoduck$Resp_rate_ug.mol > 0) %>% #filter out all negative rates
+  group_by(Treatment) %>% #group the dataset by BOTH INITIAL AND SECONDARY TREATMENT
+  summarise(mean_resp = mean(Resp_rate_ug.mol),
+            max_resp = max(Resp_rate_ug.mol),
+            min_resp = min(Resp_rate_ug.mol),
+            sd_resp = sd(Resp_rate_ug.mol),
+            SEM = ((sd(Resp_rate_ug.mol))/sqrt(n())),
+            count =n()) %>% # get the count by leaving n open
+  arrange(desc(min_resp)) # makes table in descending order 
+PediveligerT1_T3resp_table_treatments_ALL # view table - looks like the LARVAE resp was no different from the blanks
+
+# SUMMARY DATA FROM TANK DROP 7
+Day32_20190418 <- PediveligerT1_T3resp_geoduck_7
+Day32_20190418$Day <- "32"
+
+
+
+# D-hinge fifth drop respiration 20190410 #----------------------------------------------
+
+Dhingeresp_20190410<- x %>% 
+  filter((substr(x$Date, 1,9)) == "20190410") # call only resp values of juveniles
+
+# Run 1 T1 ---------------
+Dhingeresp_T1 <- Dhingeresp_20190410 %>%
+  filter((Dhingeresp_20190410$RUN) == 1)# call only resp values of juveniles
+DhingeT1resp_blanks <- Dhingeresp_T1 %>%  filter(Dhingeresp_T1$Tank.ID == "Blank") # call only blanks
+DhingeT1resp_blankMEANS <- DhingeT1resp_blanks %>% 
+  summarise(mean_Lpc = mean(abs(Lpc)),mean_Leq = mean(abs(Leq)), mean_Lz = mean(abs(Lz))) # summarize the blanks into a mean value
+
+DhingeT1resp_geoduck_5 <- Dhingeresp_T1 %>% 
+  filter(!is.na(length_number.individuals)) # remove the NAs from the number of individuals (these are the blanks)
+
+DhingeT1resp_geoduck_5$Resp_rate_ug.mol <-
+  ((((((abs(DhingeT1resp_geoduck_5$Lpc)) - (DhingeT1resp_blankMEANS$mean_Lpc))*(0.08/1000))*(60))*31.998)/(DhingeT1resp_geoduck_5$length_number.individuals))
+DhingeT1resp_geoduck_5$Resp_rate_ug.mol # units in ug O2/hr/individual
+
+DhingeT1resp_geoduck_5 <- DhingeT1resp_geoduck_5 %>%
+  filter(DhingeT1resp_geoduck_5$Resp_rate_ug.mol > 0)
+
+DhingeT1resp_table_treatments_ALL <- DhingeT1resp_geoduck_5 %>%
+  filter(DhingeT1resp_geoduck$Resp_rate_ug.mol > 0) %>% #filter out all negative rates
+  group_by(Treatment) %>% #group the dataset by BOTH INITIAL AND SECONDARY TREATMENT
+  summarise(mean_resp = mean(Resp_rate_ug.mol),
+            max_resp = max(Resp_rate_ug.mol),
+            min_resp = min(Resp_rate_ug.mol),
+            sd_resp = sd(Resp_rate_ug.mol),
+            SEM = ((sd(Resp_rate_ug.mol))/sqrt(n())),
+            count =n()) %>% # get the count by leaving n open
+  arrange(desc(min_resp)) # makes table in descending order 
+DhingeT1resp_table_treatments_ALL # view table - looks like the LARVAE resp was no different from the blanks
+
+
+# Run 2 T3 --------------- (did not do T2 becasue there was a low yield of larvae)
+Dhingeresp_t3 <- Dhingeresp_20190410 %>%
+  filter((Dhingeresp_20190410$RUN) == 2)# call only resp values of juveniles
+Dhinget3resp_blanks <- Dhingeresp_t3 %>%  filter(Dhingeresp_t3$Tank.ID == "Blank") # call only blanks
+Dhinget3resp_blankMEANS <- Dhinget3resp_blanks %>% 
+  summarise(mean_Lpc = mean(abs(Lpc)),mean_Leq = mean(abs(Leq)), mean_Lz = mean(abs(Lz))) # summarize the blanks into a mean value
+
+DhingeT3resp_geoduck_5 <- Dhingeresp_t3 %>% 
+  filter(!is.na(length_number.individuals)) # remove the NAs from the number of individuals (these are the blanks)
+
+DhingeT3resp_geoduck_5$Resp_rate_ug.mol <-
+  ((((((abs(DhingeT3resp_geoduck_5$Lpc)) - (Dhinget3resp_blankMEANS$mean_Lpc))*(0.08/1000))*(60))*31.998)/(DhingeT3resp_geoduck_5$length_number.individuals))
+DhingeT3resp_geoduck_5$Resp_rate_ug.mol # units in ug O2/hr/individual
+
+DhingeT3resp_geoduck_5 <- DhingeT3resp_geoduck_5 %>%
+  filter(DhingeT3resp_geoduck_5$Resp_rate_ug.mol > 0)
+
+Dhinget3resp_table_treatments_ALL <- DhingeT3resp_geoduck_5 %>%
+  group_by(Treatment) %>% 
+  filter(Dhinget3resp_geoduck$Resp_rate_ug.mol > 0) %>% #filter out all negative rates
+  summarise(mean_resp = mean(Resp_rate_ug.mol),
+            max_resp = max(Resp_rate_ug.mol),
+            min_resp = min(Resp_rate_ug.mol),
+            sd_resp = sd(Resp_rate_ug.mol),
+            SEM = ((sd(Resp_rate_ug.mol))/sqrt(n())),
+            count =n()) %>% # get the count by leaving n open
+  arrange(desc(min_resp)) # makes table in descending order 
+Dhinget3resp_table_treatments_ALL # view table - looks like the LARVAE resp was no different from the blanks
+
+# SUMMARY DATA FROM TANK DROP 5
+Day24_20190410 <- rbind(DhingeT1resp_geoduck_5, DhingeT3resp_geoduck_5)
+Day24_20190410$Day <- "24"
+
+###############################################
 # D-hinge fourth drop respiration 20190406 #----------------------------------------------
+###############################################
 
 Dhingeresp_20190406<- x %>% 
   filter((substr(x$Date, 1,9)) == "20190406") # call only resp values of juveniles
@@ -63,15 +175,18 @@ DhingeT1resp_blanks <- Dhingeresp_T1 %>%  filter(Dhingeresp_T1$Tank.ID == "Blank
 DhingeT1resp_blankMEANS <- DhingeT1resp_blanks %>% 
   summarise(mean_Lpc = mean(abs(Lpc)),mean_Leq = mean(abs(Leq)), mean_Lz = mean(abs(Lz))) # summarize the blanks into a mean value
 
-DhingeT1resp_geoduck <- Dhingeresp_T1 %>% 
+DhingeT1resp_geoduck_4 <- Dhingeresp_T1 %>% 
   filter(!is.na(length_number.individuals)) # remove the NAs from the number of individuals (these are the blanks)
 
-DhingeT1resp_geoduck$Resp_rate_ug.mol <-
-  ((((((abs(DhingeT1resp_geoduck$Lpc)) - (DhingeT1resp_blankMEANS$mean_Lpc))*(0.08/1000))*(60))*31.998)/(DhingeT1resp_geoduck$length_number.individuals))
+DhingeT1resp_geoduck_4$Resp_rate_ug.mol <-
+  ((((((abs(DhingeT1resp_geoduck_4$Lpc)) - (DhingeT1resp_blankMEANS$mean_Lpc))*(0.08/1000))*(60))*31.998)/(DhingeT1resp_geoduck_4$length_number.individuals))
 DhingeT1resp_geoduck$Resp_rate_ug.mol # units in ug O2/hr/individual
 
-DhingeT1resp_table_treatments_ALL <- DhingeT1resp_geoduck %>%
-  filter(DhingeT1resp_geoduck$Resp_rate_ug.mol > 0) %>% #filter out all negative rates
+DhingeT1resp_geoduck_4 <- DhingeT1resp_geoduck_4 %>%
+  filter(DhingeT1resp_geoduck_4$Resp_rate_ug.mol > 0)
+
+DhingeT1resp_table_treatments_ALL <- DhingeT1resp_geoduck_4 %>%
+  filter(DhingeT1resp_geoduck_4$Resp_rate_ug.mol > 0) %>% #filter out all negative rates
   group_by(Treatment) %>% #group the dataset by BOTH INITIAL AND SECONDARY TREATMENT
   summarise(mean_resp = mean(Resp_rate_ug.mol),
             max_resp = max(Resp_rate_ug.mol),
@@ -89,16 +204,19 @@ DhingeT2resp_blanks <- Dhingeresp_T2 %>%  filter(Dhingeresp_T2$Tank.ID == "Blank
 DhingeT2resp_blankMEANS <- DhingeT2resp_blanks %>% 
   summarise(mean_Lpc = mean(abs(Lpc)),mean_Leq = mean(abs(Leq)), mean_Lz = mean(abs(Lz))) # summarize the blanks into a mean value
 
-DhingeT2resp_geoduck <- Dhingeresp_T2 %>% 
+DhingeT2resp_geoduck_4 <- Dhingeresp_T2 %>% 
   filter(!is.na(length_number.individuals)) # remove the NAs from the number of individuals (these are the blanks)
 
-DhingeT2resp_geoduck$Resp_rate_ug.mol <-
-  ((((((abs(DhingeT2resp_geoduck$Lpc)) - (DhingeT2resp_blankMEANS$mean_Lpc))*(0.08/1000))*(60))*31.998)/(DhingeT2resp_geoduck$length_number.individuals))
-DhingeT2resp_geoduck$Resp_rate_ug.mol # units in ug O2/hr/individual
+DhingeT2resp_geoduck_4$Resp_rate_ug.mol <-
+  ((((((abs(DhingeT2resp_geoduck_4$Lpc)) - (DhingeT2resp_blankMEANS$mean_Lpc))*(0.08/1000))*(60))*31.998)/(DhingeT2resp_geoduck_4$length_number.individuals))
+DhingeT2resp_geoduck_4$Resp_rate_ug.mol # units in ug O2/hr/individual
 
-DhingeT2resp_table_treatments_ALL <- DhingeT2resp_geoduck %>%
+DhingeT2resp_geoduck_4 <- DhingeT2resp_geoduck_4 %>%
+  filter(DhingeT2resp_geoduck_4$Resp_rate_ug.mol > 0)
+
+DhingeT2resp_table_treatments_ALL <- DhingeT2resp_geoduck_4 %>%
   group_by(Treatment) %>% 
-  filter(DhingeT2resp_geoduck$Resp_rate_ug.mol > 0) %>% #filter out all negative rates
+  filter(DhingeT2resp_geoduck_4$Resp_rate_ug.mol > 0) %>% #filter out all negative rates
   summarise(mean_resp = mean(Resp_rate_ug.mol),
             max_resp = max(Resp_rate_ug.mol),
             min_resp = min(Resp_rate_ug.mol),
@@ -115,16 +233,19 @@ DhingeT3resp_blanks <- Dhingeresp_T3 %>%  filter(Dhingeresp_T3$Tank.ID == "Blank
 DhingeT3resp_blankMEANS <- DhingeT3resp_blanks %>% 
   summarise(mean_Lpc = mean(abs(Lpc)),mean_Leq = mean(abs(Leq)), mean_Lz = mean(abs(Lz))) # summarize the blanks into a mean value
 
-DhingeT3resp_geoduck <- Dhingeresp_T3 %>% 
+DhingeT3resp_geoduck_4 <- Dhingeresp_T3 %>% 
   filter(!is.na(length_number.individuals)) # remove the NAs from the number of individuals (these are the blanks)
 
-DhingeT3resp_geoduck$Resp_rate_ug.mol <-
-  ((((((abs(DhingeT3resp_geoduck$Lpc)) - (DhingeT3resp_blankMEANS$mean_Lpc))*(0.08/1000))*(60))*31.998)/(DhingeT3resp_geoduck$length_number.individuals))
-DhingeT3resp_geoduck$Resp_rate_ug.mol # units in ug O2/hr/individual
+DhingeT3resp_geoduck_4$Resp_rate_ug.mol <-
+  ((((((abs(DhingeT3resp_geoduck_4$Lpc)) - (DhingeT3resp_blankMEANS$mean_Lpc))*(0.08/1000))*(60))*31.998)/(DhingeT3resp_geoduck_4$length_number.individuals))
+DhingeT3resp_geoduck_4$Resp_rate_ug.mol # units in ug O2/hr/individual
 
-DhingeT3resp_table_treatments_ALL <- DhingeT3resp_geoduck %>%
+DhingeT3resp_geoduck_4 <- DhingeT3resp_geoduck_4 %>%
+  filter(DhingeT3resp_geoduck_4$Resp_rate_ug.mol > 0)
+
+DhingeT3resp_table_treatments_ALL <- DhingeT3resp_geoduck_4 %>%
   group_by(Treatment) %>% 
-  filter(DhingeT3resp_geoduck$Resp_rate_ug.mol > 0) %>% #filter out all negative rates
+  filter(DhingeT3resp_geoduck_4$Resp_rate_ug.mol > 0) %>% #filter out all negative rates
   summarise(mean_resp = mean(Resp_rate_ug.mol),
             max_resp = max(Resp_rate_ug.mol),
             min_resp = min(Resp_rate_ug.mol),
@@ -134,10 +255,13 @@ DhingeT3resp_table_treatments_ALL <- DhingeT3resp_geoduck %>%
   arrange(desc(min_resp)) # makes table in descending order 
 DhingeT3resp_table_treatments_ALL # view table - looks like the LARVAE resp was no different from the blanks
 
+# SUMMARY DATA FROM TANK DROP 5
+Day20_20190406 <- rbind(DhingeT1resp_geoduck_4, DhingeT3resp_geoduck_4)
+Day20_20190406$Day <- "20"
 
-
-
+#######################################################
 # D-hinge third drop respiration 20190402 #----------------------------------------------
+#######################################################
 
 Dhingeresp_20190402<- x %>% 
   filter((substr(x$Date, 1,9)) == "20190402") # call only resp values of juveniles
@@ -149,15 +273,18 @@ DhingeT1resp_blanks <- Dhingeresp_T1 %>%  filter(Dhingeresp_T1$Tank.ID == "Blank
 DhingeT1resp_blankMEANS <- DhingeT1resp_blanks %>% 
   summarise(mean_Lpc = mean(abs(Lpc)),mean_Leq = mean(abs(Leq)), mean_Lz = mean(abs(Lz))) # summarize the blanks into a mean value
 
-DhingeT1resp_geoduck <- Dhingeresp_T1 %>% 
+DhingeT1resp_geoduck_3 <- Dhingeresp_T1 %>% 
   filter(!is.na(length_number.individuals)) # remove the NAs from the number of individuals (these are the blanks)
 
-DhingeT1resp_geoduck$Resp_rate_ug.mol <-
-  ((((((abs(DhingeT1resp_geoduck$Lpc)) - (DhingeT1resp_blankMEANS$mean_Lpc))*(0.08/1000))*(60))*31.998)/(DhingeT1resp_geoduck$length_number.individuals))
-DhingeT1resp_geoduck$Resp_rate_ug.mol # units in ug O2/hr/individual
+DhingeT1resp_geoduck_3$Resp_rate_ug.mol <-
+  ((((((abs(DhingeT1resp_geoduck_3$Lpc)) - (DhingeT1resp_blankMEANS$mean_Lpc))*(0.08/1000))*(60))*31.998)/(DhingeT1resp_geoduck_3$length_number.individuals))
+DhingeT1resp_geoduck_3$Resp_rate_ug.mol # units in ug O2/hr/individual
 
-DhingeT1resp_table_treatments_ALL <- DhingeT1resp_geoduck %>%
-  filter(DhingeT1resp_geoduck$Resp_rate_ug.mol > 0) %>% #filter out all negative rates
+DhingeT1resp_geoduck_3 <- DhingeT1resp_geoduck_3 %>%
+  filter(DhingeT1resp_geoduck_3$Resp_rate_ug.mol > 0)
+
+DhingeT1resp_table_treatments_ALL <- DhingeT1resp_geoduck_3 %>%
+  filter(DhingeT1resp_geoduck_3$Resp_rate_ug.mol > 0) %>% #filter out all negative rates
   group_by(Treatment) %>% #group the dataset by BOTH INITIAL AND SECONDARY TREATMENT
   summarise(mean_resp = mean(Resp_rate_ug.mol),
             max_resp = max(Resp_rate_ug.mol),
@@ -175,16 +302,19 @@ DhingeT2resp_blanks <- Dhingeresp_T2 %>%  filter(Dhingeresp_T2$Tank.ID == "Blank
 DhingeT2resp_blankMEANS <- DhingeT2resp_blanks %>% 
   summarise(mean_Lpc = mean(abs(Lpc)),mean_Leq = mean(abs(Leq)), mean_Lz = mean(abs(Lz))) # summarize the blanks into a mean value
 
-DhingeT2resp_geoduck <- Dhingeresp_T2 %>% 
+DhingeT2resp_geoduck_3 <- Dhingeresp_T2 %>% 
   filter(!is.na(length_number.individuals)) # remove the NAs from the number of individuals (these are the blanks)
 
-DhingeT2resp_geoduck$Resp_rate_ug.mol <-
-  ((((((abs(DhingeT2resp_geoduck$Lpc)) - (DhingeT2resp_blankMEANS$mean_Lpc))*(0.08/1000))*(60))*31.998)/(DhingeT2resp_geoduck$length_number.individuals))
-DhingeT2resp_geoduck$Resp_rate_ug.mol # units in ug O2/hr/individual
+DhingeT2resp_geoduck_3$Resp_rate_ug.mol <-
+  ((((((abs(DhingeT2resp_geoduck_3$Lpc)) - (DhingeT2resp_blankMEANS$mean_Lpc))*(0.08/1000))*(60))*31.998)/(DhingeT2resp_geoduck_3$length_number.individuals))
+DhingeT2resp_geoduck_3$Resp_rate_ug.mol # units in ug O2/hr/individual
 
-DhingeT2resp_table_treatments_ALL <- DhingeT2resp_geoduck %>%
+DhingeT2resp_geoduck_3 <- DhingeT2resp_geoduck_3 %>%
+  filter(DhingeT2resp_geoduck_3$Resp_rate_ug.mol > 0)
+
+DhingeT2resp_table_treatments_ALL <- DhingeT2resp_geoduck_3 %>%
   group_by(Treatment) %>% 
-  filter(DhingeT2resp_geoduck$Resp_rate_ug.mol > 0) %>% #filter out all negative rates
+  filter(DhingeT2resp_geoduck_3$Resp_rate_ug.mol > 0) %>% #filter out all negative rates
   summarise(mean_resp = mean(Resp_rate_ug.mol),
             max_resp = max(Resp_rate_ug.mol),
             min_resp = min(Resp_rate_ug.mol),
@@ -201,16 +331,20 @@ DhingeT3resp_blanks <- Dhingeresp_T3 %>%  filter(Dhingeresp_T3$Tank.ID == "Blank
 DhingeT3resp_blankMEANS <- DhingeT3resp_blanks %>% 
   summarise(mean_Lpc = mean(abs(Lpc)),mean_Leq = mean(abs(Leq)), mean_Lz = mean(abs(Lz))) # summarize the blanks into a mean value
 
-DhingeT3resp_geoduck <- Dhingeresp_T3 %>% 
+DhingeT3resp_geoduck_3 <- Dhingeresp_T3 %>% 
   filter(!is.na(length_number.individuals)) # remove the NAs from the number of individuals (these are the blanks)
 
-DhingeT3resp_geoduck$Resp_rate_ug.mol <-
-  ((((((abs(DhingeT3resp_geoduck$Lpc)) - (DhingeT3resp_blankMEANS$mean_Lpc))*(0.08/1000))*(60))*31.998)/(DhingeT3resp_geoduck$length_number.individuals))
-DhingeT3resp_geoduck$Resp_rate_ug.mol # units in ug O2/hr/individual
+DhingeT3resp_geoduck_3$Resp_rate_ug.mol <-
+  ((((((abs(DhingeT3resp_geoduck_3$Lpc)) - (DhingeT3resp_blankMEANS$mean_Lpc))*(0.08/1000))*(60))*31.998)/(DhingeT3resp_geoduck_3$length_number.individuals))
+DhingeT3resp_geoduck_3$Resp_rate_ug.mol # units in ug O2/hr/individual
 
-DhingeT3resp_table_treatments_ALL <- DhingeT3resp_geoduck %>%
+
+DhingeT3resp_geoduck_3 <- DhingeT3resp_geoduck_3 %>%
+  filter(DhingeT3resp_geoduck_3$Resp_rate_ug.mol > 0)
+
+DhingeT3resp_table_treatments_ALL <- DhingeT3resp_geoduck_3 %>%
   group_by(Treatment) %>% 
-  filter(DhingeT3resp_geoduck$Resp_rate_ug.mol > 0) %>% #filter out all negative rates
+  filter(DhingeT3resp_geoduck_3$Resp_rate_ug.mol > 0) %>% #filter out all negative rates
   summarise(mean_resp = mean(Resp_rate_ug.mol),
             max_resp = max(Resp_rate_ug.mol),
             min_resp = min(Resp_rate_ug.mol),
@@ -220,8 +354,13 @@ DhingeT3resp_table_treatments_ALL <- DhingeT3resp_geoduck %>%
   arrange(desc(min_resp)) # makes table in descending order 
 DhingeT3resp_table_treatments_ALL # view table - looks like the LARVAE resp was no different from the blanks
 
+# SUMMARY DATA FROM TANK DROP 5
+Day16_20190402 <- rbind(DhingeT1resp_geoduck_3, DhingeT3resp_geoduck_3)
+Day16_20190402$Day <- "16"
 
+#######################################################
 # D-hinge second drop respiration 20190329 #----------------------------------------------
+#######################################################
 
 Dhingeresp_190329 <- x %>% 
   filter((substr(x$Date, 1,9)) == "20190329") # call only resp values of juveniles
@@ -235,14 +374,17 @@ DhingeT1resp_blanks <- Dhingeresp_T1 %>%  filter(Dhingeresp_T1$Tank.ID == "Blank
 DhingeT1resp_blankMEANS <- DhingeT1resp_blanks %>% 
   summarise(mean_Lpc = mean(abs(Lpc)),mean_Leq = mean(abs(Leq)), mean_Lz = mean(abs(Lz))) # summarize the blanks into a mean value
 
-DhingeT1resp_geoduck <- Dhingeresp_T1 %>% 
+DhingeT1resp_geoduck_2 <- Dhingeresp_T1 %>% 
   filter(!is.na(length_number.individuals)) # remove the NAs from the number of individuals (these are the blanks)
 
-DhingeT1resp_geoduck$Resp_rate_ug.mol <-
-  ((((((abs(DhingeT1resp_geoduck$Lpc)) - (DhingeT1resp_blankMEANS$mean_Lpc))*(0.08/1000))*(60))*31.998)/(DhingeT1resp_geoduck$length_number.individuals))
-DhingeT1resp_geoduck$Resp_rate_ug.mol # units in ug O2/hr/individual
+DhingeT1resp_geoduck_2$Resp_rate_ug.mol <-
+  ((((((abs(DhingeT1resp_geoduck_2$Lpc)) - (DhingeT1resp_blankMEANS$mean_Lpc))*(0.08/1000))*(60))*31.998)/(DhingeT1resp_geoduck_2$length_number.individuals))
+DhingeT1resp_geoduck_2$Resp_rate_ug.mol # units in ug O2/hr/individual
 
-DhingeT1resp_table_treatments_ALL <- DhingeT1resp_geoduck %>%
+DhingeT1resp_geoduck_2 <- DhingeT1resp_geoduck_2 %>%
+  filter(DhingeT1resp_geoduck_2$Resp_rate_ug.mol > 0)
+
+DhingeT1resp_table_treatments_ALL <- DhingeT1resp_geoduck_2 %>%
   group_by(Treatment) %>% #group the dataset by BOTH INITIAL AND SECONDARY TREATMENT
   summarise(mean_resp = mean(Resp_rate_ug.mol),
             max_resp = max(Resp_rate_ug.mol),
@@ -260,14 +402,17 @@ DhingeT2resp_blanks <- Dhingeresp_T2 %>%  filter(Dhingeresp_T2$Tank.ID == "Blank
 DhingeT2resp_blankMEANS <- DhingeT2resp_blanks %>% 
   summarise(mean_Lpc = mean(abs(Lpc)),mean_Leq = mean(abs(Leq)), mean_Lz = mean(abs(Lz))) # summarize the blanks into a mean value
 
-DhingeT2resp_geoduck <- Dhingeresp_T2 %>% 
+DhingeT2resp_geoduck_2 <- Dhingeresp_T2 %>% 
   filter(!is.na(length_number.individuals)) # remove the NAs from the number of individuals (these are the blanks)
 
-DhingeT2resp_geoduck$Resp_rate_ug.mol <-
-  ((((((abs(DhingeT2resp_geoduck$Lpc)) - (DhingeT2resp_blankMEANS$mean_Lpc))*(0.08/1000))*(60))*31.998)/(DhingeT2resp_geoduck$length_number.individuals))
-DhingeT2resp_geoduck$Resp_rate_ug.mol # units in ug O2/hr/individual
+DhingeT2resp_geoduck_2$Resp_rate_ug.mol <-
+  ((((((abs(DhingeT2resp_geoduck_2$Lpc)) - (DhingeT2resp_blankMEANS$mean_Lpc))*(0.08/1000))*(60))*31.998)/(DhingeT2resp_geoduck_2$length_number.individuals))
+DhingeT2resp_geoduck_2$Resp_rate_ug.mol # units in ug O2/hr/individual
 
-DhingeT2resp_table_treatments_ALL <- DhingeT2resp_geoduck %>%
+DhingeT2resp_geoduck_2 <- DhingeT2resp_geoduck_2 %>%
+  filter(DhingeT2resp_geoduck_2$Resp_rate_ug.mol > 0)
+
+DhingeT2resp_table_treatments_ALL <- DhingeT2resp_geoduck_2 %>%
   group_by(Treatment) %>% #group the dataset by BOTH INITIAL AND SECONDARY TREATMENT
   summarise(mean_resp = mean(Resp_rate_ug.mol),
             max_resp = max(Resp_rate_ug.mol),
@@ -285,14 +430,17 @@ DhingeT3resp_blanks <- Dhingeresp_T3 %>%  filter(Dhingeresp_T3$Tank.ID == "Blank
 DhingeT3resp_blankMEANS <- DhingeT3resp_blanks %>% 
   summarise(mean_Lpc = mean(abs(Lpc)),mean_Leq = mean(abs(Leq)), mean_Lz = mean(abs(Lz))) # summarize the blanks into a mean value
 
-DhingeT3resp_geoduck <- Dhingeresp_T3 %>% 
+DhingeT3resp_geoduck_2 <- Dhingeresp_T3 %>% 
   filter(!is.na(length_number.individuals)) # remove the NAs from the number of individuals (these are the blanks)
 
-DhingeT3resp_geoduck$Resp_rate_ug.mol <-
-  ((((((abs(DhingeT3resp_geoduck$Lpc)) - (DhingeT3resp_blankMEANS$mean_Lpc))*(0.08/1000))*(60))*31.998)/(DhingeT3resp_geoduck$length_number.individuals))
-DhingeT3resp_geoduck$Resp_rate_ug.mol # units in ug O2/hr/individual
+DhingeT3resp_geoduck_2$Resp_rate_ug.mol <-
+  ((((((abs(DhingeT3resp_geoduck_2$Lpc)) - (DhingeT3resp_blankMEANS$mean_Lpc))*(0.08/1000))*(60))*31.998)/(DhingeT3resp_geoduck_2$length_number.individuals))
+DhingeT3resp_geoduck_2$Resp_rate_ug.mol # units in ug O2/hr/individual
 
-DhingeT3resp_table_treatments_ALL <- DhingeT3resp_geoduck %>%
+DhingeT3resp_geoduck_2 <- DhingeT3resp_geoduck_2 %>%
+  filter(DhingeT3resp_geoduck_2$Resp_rate_ug.mol > 0)
+
+DhingeT3resp_table_treatments_ALL <- DhingeT3resp_geoduck_2 %>%
   group_by(Treatment) %>% #group the dataset by BOTH INITIAL AND SECONDARY TREATMENT
   summarise(mean_resp = mean(Resp_rate_ug.mol),
             max_resp = max(Resp_rate_ug.mol),
@@ -303,10 +451,13 @@ DhingeT3resp_table_treatments_ALL <- DhingeT3resp_geoduck %>%
   arrange(desc(min_resp)) # makes table in descending order 
 DhingeT3resp_table_treatments_ALL # view table - looks like the LARVAE resp was no different from the blanks
 
+# SUMMARY DATA FROM TANK DROP 2
+Day12_20190329 <- rbind(DhingeT1resp_geoduck_2, DhingeT3resp_geoduck_2)
+Day12_20190329$Day <- "12"
 
-
-
+####################################################
 # D-hinge first drop respiration 20190325 #----------------------------------------------
+####################################################
 
 Dhingeresp_190325 <- x %>% 
   filter((substr(x$Date, 1,9)) == "20190325") # call only resp values of juveniles
@@ -318,14 +469,17 @@ DhingeT0resp_blanks <- Dhingeresp_T0 %>%  filter(Dhingeresp_T0$Tank.ID == "Blank
 DhingeT0resp_blankMEANS <- DhingeT0resp_blanks %>% 
   summarise(mean_Lpc = mean(abs(Lpc)),mean_Leq = mean(abs(Leq)), mean_Lz = mean(abs(Lz))) # summarize the blanks into a mean value
 
-DhingeT0resp_geoduck <- Dhingeresp_T0 %>% 
+DhingeT0resp_geoduck_1 <- Dhingeresp_T0 %>% 
   filter(!is.na(length_number.individuals)) # remove the NAs from the number of individuals (these are the blanks)
 
-DhingeT0resp_geoduck$Resp_rate_ug.mol <-
-  ((((((abs(DhingeT0resp_geoduck$Lpc)) - (DhingeT0resp_blankMEANS$mean_Lpc))*(0.08/1000))*(60))*31.998)/(DhingeT0resp_geoduck$length_number.individuals))
-DhingeT0resp_geoduck$Resp_rate_ug.mol # units in ug O2/hr/individual
+DhingeT0resp_geoduck_1$Resp_rate_ug.mol <-
+  ((((((abs(DhingeT0resp_geoduck_1$Lpc)) - (DhingeT0resp_blankMEANS$mean_Lpc))*(0.08/1000))*(60))*31.998)/(DhingeT0resp_geoduck_1$length_number.individuals))
+DhingeT0resp_geoduck_1$Resp_rate_ug.mol # units in ug O2/hr/individual
 
-DhingeT0resp_table_treatments_ALL <- DhingeT0resp_geoduck %>%
+DhingeT0resp_geoduck_1 <- DhingeT0resp_geoduck_1 %>%
+  filter(DhingeT0resp_geoduck_1$Resp_rate_ug.mol > 0)
+
+DhingeT0resp_table_treatments_ALL <- DhingeT0resp_geoduck_1 %>%
   group_by(Treatment) %>% #group the dataset by BOTH INITIAL AND SECONDARY TREATMENT
   summarise(mean_resp = mean(Resp_rate_ug.mol),
             max_resp = max(Resp_rate_ug.mol),
@@ -344,14 +498,17 @@ DhingeT1resp_blanks <- Dhingeresp_T1 %>%  filter(Dhingeresp_T1$Tank.ID == "Blank
 DhingeT1resp_blankMEANS <- DhingeT1resp_blanks %>% 
   summarise(mean_Lpc = mean(abs(Lpc)),mean_Leq = mean(abs(Leq)), mean_Lz = mean(abs(Lz))) # summarize the blanks into a mean value
 
-DhingeT1resp_geoduck <- Dhingeresp_T1 %>% 
+DhingeT1resp_geoduck_1 <- Dhingeresp_T1 %>% 
   filter(!is.na(length_number.individuals)) # remove the NAs from the number of individuals (these are the blanks)
 
-DhingeT1resp_geoduck$Resp_rate_ug.mol <-
-  ((((((abs(DhingeT1resp_geoduck$Lpc)) - (DhingeT1resp_blankMEANS$mean_Lpc))*(0.08/1000))*(60))*31.998)/(DhingeT1resp_geoduck$length_number.individuals))
-DhingeT1resp_geoduck$Resp_rate_ug.mol # units in ug O2/hr/individual
+DhingeT1resp_geoduck_1$Resp_rate_ug.mol <-
+  ((((((abs(DhingeT1resp_geoduck_1$Lpc)) - (DhingeT1resp_blankMEANS$mean_Lpc))*(0.08/1000))*(60))*31.998)/(DhingeT1resp_geoduck_1$length_number.individuals))
+DhingeT1resp_geoduck_1$Resp_rate_ug.mol # units in ug O2/hr/individual
 
-DhingeT1resp_table_treatments_ALL <- DhingeT1resp_geoduck %>%
+DhingeT1resp_geoduck_1 <- DhingeT1resp_geoduck_1 %>%
+  filter(DhingeT1resp_geoduck_1$Resp_rate_ug.mol > 0)
+
+DhingeT1resp_table_treatments_ALL <- DhingeT1resp_geoduck_1 %>%
   group_by(Treatment) %>% #group the dataset by BOTH INITIAL AND SECONDARY TREATMENT
   summarise(mean_resp = mean(Resp_rate_ug.mol),
             max_resp = max(Resp_rate_ug.mol),
@@ -369,14 +526,17 @@ DhingeT2resp_blanks <- Dhingeresp_T2 %>%  filter(Dhingeresp_T2$Tank.ID == "Blank
 DhingeT2resp_blankMEANS <- DhingeT2resp_blanks %>% 
   summarise(mean_Lpc = mean(abs(Lpc)),mean_Leq = mean(abs(Leq)), mean_Lz = mean(abs(Lz))) # summarize the blanks into a mean value
 
-DhingeT2resp_geoduck <- Dhingeresp_T2 %>% 
+DhingeT2resp_geoduck_1 <- Dhingeresp_T2 %>% 
   filter(!is.na(length_number.individuals)) # remove the NAs from the number of individuals (these are the blanks)
 
-DhingeT2resp_geoduck$Resp_rate_ug.mol <-
-  ((((((abs(DhingeT2resp_geoduck$Lpc)) - (DhingeT2resp_blankMEANS$mean_Lpc))*(0.08/1000))*(60))*31.998)/(DhingeT2resp_geoduck$length_number.individuals))
-DhingeT2resp_geoduck$Resp_rate_ug.mol # units in ug O2/hr/individual
+DhingeT2resp_geoduck_1$Resp_rate_ug.mol <-
+  ((((((abs(DhingeT2resp_geoduck_1$Lpc)) - (DhingeT2resp_blankMEANS$mean_Lpc))*(0.08/1000))*(60))*31.998)/(DhingeT2resp_geoduck_1$length_number.individuals))
+DhingeT2resp_geoduck_1$Resp_rate_ug.mol # units in ug O2/hr/individual
 
-DhingeT2resp_table_treatments_ALL <- DhingeT2resp_geoduck %>%
+DhingeT2resp_geoduck_1 <- DhingeT2resp_geoduck_1 %>%
+  filter(DhingeT2resp_geoduck_1$Resp_rate_ug.mol > 0)
+
+DhingeT2resp_table_treatments_ALL <- DhingeT2resp_geoduck_1 %>%
   group_by(Treatment) %>% #group the dataset by BOTH INITIAL AND SECONDARY TREATMENT
   summarise(mean_resp = mean(Resp_rate_ug.mol),
             max_resp = max(Resp_rate_ug.mol),
@@ -394,12 +554,15 @@ DhingeT3resp_blanks <- Dhingeresp_T3 %>%  filter(Dhingeresp_T3$Tank.ID == "Blank
 DhingeT3resp_blankMEANS <- DhingeT3resp_blanks %>% 
   summarise(mean_Lpc = mean(abs(Lpc)),mean_Leq = mean(abs(Leq)), mean_Lz = mean(abs(Lz))) # summarize the blanks into a mean value
 
-DhingeT3resp_geoduck <- Dhingeresp_T3 %>% 
+DhingeT3resp_geoduck_1 <- Dhingeresp_T3 %>% 
   filter(!is.na(length_number.individuals)) # remove the NAs from the number of individuals (these are the blanks)
 
-DhingeT3resp_geoduck$Resp_rate_ug.mol <-
-  ((((((abs(DhingeT3resp_geoduck$Lpc)) - (DhingeT3resp_blankMEANS$mean_Lpc))*(0.08/1000))*(60))*31.998)/(DhingeT3resp_geoduck$length_number.individuals))
-DhingeT3resp_geoduck$Resp_rate_ug.mol # units in ug O2/hr/individual
+DhingeT3resp_geoduck_1$Resp_rate_ug.mol <-
+  ((((((abs(DhingeT3resp_geoduck_1$Lpc)) - (DhingeT3resp_blankMEANS$mean_Lpc))*(0.08/1000))*(60))*31.998)/(DhingeT3resp_geoduck_1$length_number.individuals))
+DhingeT3resp_geoduck_1$Resp_rate_ug.mol # units in ug O2/hr/individual
+
+DhingeT3resp_geoduck_1 <- DhingeT3resp_geoduck_1 %>%
+  filter(DhingeT3resp_geoduck_1$Resp_rate_ug.mol > 0)
 
 DhingeT3resp_table_treatments_ALL <- DhingeT3resp_geoduck %>%
   group_by(Treatment) %>% #group the dataset by BOTH INITIAL AND SECONDARY TREATMENT
@@ -412,8 +575,133 @@ DhingeT3resp_table_treatments_ALL <- DhingeT3resp_geoduck %>%
   arrange(desc(min_resp)) # makes table in descending order 
 DhingeT3resp_table_treatments_ALL # view table - looks like the LARVAE resp was no different from the blanks
 
+# SUMMARY DATA FROM TANK DROP 1
+Day8_20190325 <- rbind(DhingeT1resp_geoduck_1, DhingeT3resp_geoduck_1)
+Day8_20190325$Day <- "8"
 
 
+#PLOTS OF AMBIENT AND ELEVATED FROM JUST T1 AND T3
+# RBIND ALL DATA
+
+ALL_DATA <- rbind(Day8_20190325, Day12_20190329, Day16_20190402, Day20_20190406, Day24_20190410, Day32_20190418)
+
+ALL_DATA$Resp_rate_ng.mol <- ALL_DATA$Resp_rate_ug.mol*1000
+
+# resp fig for all data
+RESP_FIG_T1_T3 <- ggplot(ALL_DATA, aes(x = factor(Date), y = Resp_rate_ng.mol, fill = Treatment)) +
+  theme_classic() +
+  scale_fill_manual(values=c("white", "grey3"), 
+                    labels=c("P_ambient","P_elevated")) +
+  geom_boxplot(alpha = 0.5, # color hue
+               width=0.6, # boxplot width
+               outlier.size=0, # make outliers small
+               position = position_dodge(preserve = "single")) + 
+  geom_point(pch = 19, position = position_jitterdodge(.05), size=1) +
+  stat_summary(fun.y=mean, geom = "errorbar", aes(ymax = ..y.., ymin = ..y..), 
+               width = 0.6, size=0.4, linetype = "dashed", position = position_dodge(preserve = "single")) +
+  scale_x_discrete(labels = c(8,12,16,20,24,32)) +
+  theme(legend.position = c(0.55,0.96), legend.direction="horizontal", legend.title=element_blank()) +
+  ylim(0,10) + 
+  labs(y=expression("Respiration rate"~ng~O[2]*hr^{-1}*individual^{-1}), x=expression("Age (days)"))
+RESP_FIG_T1_T3.FINAL <- RESP_FIG_T1_T3  + 
+  theme(axis.text.x = element_text(angle = 0, hjust = 0.5, size=13,color="black"),
+        axis.text.y = element_text(angle = 0, hjust = 0.5, size=13,color="black"),
+        axis.line = element_line(color = 'black'),
+        axis.ticks.length=unit(0.2, "cm"),
+        axis.title.x = element_text(size = 14),
+        axis.title.y = element_text(size = 14)) 
+RESP_FIG_T1_T3.FINAL # view the plot
+
+# resp fig for days 8 - 24 
+ALL_DATA_8.24 <- ALL_DATA %>% 
+  filter(!(Day == 32)) # make new dataset without day 32 data
+
+RESP_FIG_DAYS8.24 <- ggplot(ALL_DATA_8.24, aes(x = factor(Date), y = Resp_rate_ng.mol, fill = Treatment)) +
+  theme_classic() +
+scale_fill_manual(values=c("blue", "orange"), 
+                  labels=c("ambient","var.pH")) +
+  geom_boxplot(alpha = 0.5, # color hue
+               width=0.6, # boxplot width
+               outlier.size=0, # make outliers small
+               position = position_dodge(preserve = "single")) + 
+  geom_point(pch = 19, position = position_jitterdodge(.05), size=1) +
+  stat_summary(fun.y=mean, geom = "errorbar", aes(ymax = ..y.., ymin = ..y..), 
+               width = 0.6, size=0.4, linetype = "dashed", position = position_dodge(preserve = "single")) +
+  scale_x_discrete(labels = c(8,12,16,20,24,32)) +
+  theme(legend.position = c(0.55,0.96), legend.direction="horizontal", legend.title=element_blank()) +
+  ylim(0,10) + 
+  labs(y=expression("Respiration rate"~ng~O[2]*hr^{-1}*individual^{-1}), x=expression("Age"))
+RESP_FIG_DAYS8.24_FINAL <- RESP_FIG_DAYS8.24  + 
+  theme(axis.text.x = element_text(angle = 0, hjust = 0.5, size=13,color="black"),
+        axis.text.y = element_text(angle = 0, hjust = 0.5, size=13,color="black"),
+        axis.line = element_line(color = 'black'),
+        axis.ticks.length=unit(0.2, "cm"),
+        axis.title.x = element_text(size = 14),
+        axis.title.y = element_text(size = 14)) 
+RESP_FIG_DAYS8.24_FINAL # view the plot
+
+
+
+# ANALYSIS
+hist(ALL_DATA_8.24$Resp_rate_ng.mol) # histogram shows positibe skew
+# model on transformed respiration data
+RESP_aov <- aov(Resp_rate_ng.mol~Treatment*Day, data = ALL_DATA_8.24) # run two way anova of parental treatment*time
+summary(RESP_aov) # significant effect of treatment and time
+# diagnostic tests and plots of model residuals (not transformed)
+# Levene's test 
+leveneTest(RESP_aov) # p 0.2236
+# Shapiro test
+shapiro.test(residuals(RESP_aov)) # residuals are normal
+# hist qq residual diagnostic
+par(mfrow=c(1,3)) #set plotting configuration
+par(mar=c(1,1,1,1)) #set margins for plots
+hist(residuals(RESP_aov)) #plot histogram of residuals
+boxplot(residuals(RESP_aov)) #plot boxplot of residuals
+plot(fitted(RESP_aov),residuals(RESP_aov)) 
+qqnorm(residuals(RESP_aov)) # qqplot
+# plot and test model for heteroscedasticity
+plot(lm(RESP_aov))
+bptest(lm(RESP_aov))  # Breusch-Pagan test p-value = 0.1729
+
+# post-hoc
+library(lsmeans)        # Version: 2.27-62, Date/Publication: 2018-05-11, Depends: methods, R (>= 3.2)
+resp.ph <- lsmeans(RESP_aov, pairwise ~ Treatment*Day)# pariwise Tukey Post-hoc test between repeated treatments
+resp.ph # view post hoc summary
+E1.pairs.RESP.05 <- cld(resp.ph, alpha=.05, Letters=letters) #list pairwise tests and letter display p < 0.05
+E1.pairs.RESP.05 # 
+E1.pairs.RESP.1 <- cld(resp.ph, alpha=.1, Letters=letters) #list pairwise tests and letter display p < 0.1
+E1.pairs.RESP.1 # maringal differences
+
+RESP_FIG_DAYS8.24_FINAL <- 
+  RESP_FIG_DAYS8.24_FINAL + 
+  annotate("text", x=0.85, y=5.56, label = "de", size = 4) + 
+  annotate("text", x=1.2, y=4, label = "abc", size = 4) + 
+  annotate("text", x=1.9, y=10.0, label = "e", size = 4) + 
+  annotate("text", x=2.2, y=4, label = "abc", size = 4) + 
+  annotate("text", x=2.85, y=3.5, label = "ab", size = 4) + 
+  annotate("text", x=3.2, y=2.2, label = "a", size = 4) + 
+  annotate("text", x=3.85, y=8, label = "cde", size = 4) + 
+  annotate("text", x=4.2, y=4.8, label = "ab", size = 4) + 
+  annotate("text", x=4.85, y=8.6, label = "bcde", size = 4) + 
+  annotate("text", x=5.2, y=5.0, label = "bcd", size = 4) 
+RESP_FIG_DAYS8.24_FINAL
+
+#save file to output
+ggsave(file="Output/Larvae.resp.plot.pdf", RESP_FIG_DAYS8.24_FINAL, width = 12, height = 8, units = c("in"))
+
+ALL_DATA_table <- ALL_DATA %>%
+  group_by(Day,Treatment) %>% #group the dataset by BOTH INITIAL AND SECONDARY TREATMENT
+  summarise(mean_resp = mean(Resp_rate_ng.mol),
+            max_resp = max(Resp_rate_ng.mol),
+            min_resp = min(Resp_rate_ng.mol),
+            sd_resp = sd(Resp_rate_ng.mol),
+            SEM = ((sd(Resp_rate_ng.mol))/sqrt(n())),
+            count =n()) %>% # get the count by leaving n open
+  arrange(desc(min_resp)) # makes table in descending order 
+ALL_DATA_table # view table - looks like the LARVAE resp was no different from the blanks
+
+
+###################################################  TEST LARVAE FROM OTHER POOLS #################################
 # UMBONE LARVAE -----------------------------------------------------------------
 UMBONEresp_all <- x %>% 
   filter((substr(x$Date, 1,9)) == "20190322") # call only resp values of juveniles
