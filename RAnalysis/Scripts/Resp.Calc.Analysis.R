@@ -616,7 +616,7 @@ RESP_FIG_T1_T3.FINAL # view the plot
 ALL_DATA_8.24 <- ALL_DATA %>% 
   filter(!(Day == 32)) # make new dataset without day 32 data
 
-RESP_FIG_DAYS8.24 <- ggplot(ALL_DATA_8.24, aes(x = factor(Date), y = Resp_rate_ng.mol, fill = Treatment)) +
+RESP_FIG_DAYS8.24 <- ggplot(ALL_DATA_8.24, aes(x = factor(Date), y = (Resp_rate_ng.mol), fill = Treatment)) +
   theme_classic() +
 scale_fill_manual(values=c("blue", "orange"), 
                   labels=c("ambient","var.pH")) +
@@ -630,7 +630,7 @@ scale_fill_manual(values=c("blue", "orange"),
   scale_x_discrete(labels = c(8,12,16,20,24,32)) +
   theme(legend.position = c(0.55,0.96), legend.direction="horizontal", legend.title=element_blank()) +
   ylim(0,10) + 
-  labs(y=expression("Respiration rate"~ng~O[2]*hr^{-1}*individual^{-1}), x=expression("Age"))
+  labs(y=expression("sqrt(Respiration rate)"~ng~O[2]*hr^{-1}*individual^{-1}), x=expression("Age"))
 RESP_FIG_DAYS8.24_FINAL <- RESP_FIG_DAYS8.24  + 
   theme(axis.text.x = element_text(angle = 0, hjust = 0.5, size=13,color="black"),
         axis.text.y = element_text(angle = 0, hjust = 0.5, size=13,color="black"),
@@ -642,16 +642,14 @@ RESP_FIG_DAYS8.24_FINAL # view the plot
 
 
 
-# ANALYSIS
+# TWO WAY ANOVA MODEL
 hist(ALL_DATA_8.24$Resp_rate_ng.mol) # histogram shows positibe skew
 # model on transformed respiration data
 RESP_aov <- aov(Resp_rate_ng.mol~Treatment*Day, data = ALL_DATA_8.24) # run two way anova of parental treatment*time
 summary(RESP_aov) # significant effect of treatment and time
 # diagnostic tests and plots of model residuals (not transformed)
-# Levene's test 
-leveneTest(RESP_aov) # p 0.2236
 # Shapiro test
-shapiro.test(residuals(RESP_aov)) # residuals are normal
+shapiro.test(residuals(RESP_aov)) # residuals are non-normal - p = 2.381e-05
 # hist qq residual diagnostic
 par(mfrow=c(1,3)) #set plotting configuration
 par(mar=c(1,1,1,1)) #set margins for plots
@@ -659,35 +657,46 @@ hist(residuals(RESP_aov)) #plot histogram of residuals
 boxplot(residuals(RESP_aov)) #plot boxplot of residuals
 plot(fitted(RESP_aov),residuals(RESP_aov)) 
 qqnorm(residuals(RESP_aov)) # qqplot
-# plot and test model for heteroscedasticity
-plot(lm(RESP_aov))
-bptest(lm(RESP_aov))  # Breusch-Pagan test p-value = 0.1729
 
+# TRANSFORM VIA SQRT AND RUN MODEL AGAIN - TEST SHAPRIO.WILK FOR NORMALITY ASSUMPTIONS
+# model on transformed respiration data
+ALL_DATA_8.24$Resp_rate_ng.mol_SQRT <- sqrt(ALL_DATA_8.24$Resp_rate_ng.mol) # new column for sqrt of the data
+RESP_aov.sqrt <- aov(Resp_rate_ng.mol_SQRT~Treatment*Day, data = ALL_DATA_8.24) # run two way anova of parental treatment*time
+summary(RESP_aov.sqrt) # looses the interaction term effect but keeps the effect of time and treatment seperately
+# Shapiro test
+shapiro.test(residuals(RESP_aov.sqrt)) # residuals are normal  - p =0.1048 
 # post-hoc
 library(lsmeans)        # Version: 2.27-62, Date/Publication: 2018-05-11, Depends: methods, R (>= 3.2)
-resp.ph <- lsmeans(RESP_aov, pairwise ~ Treatment*Day)# pariwise Tukey Post-hoc test between repeated treatments
+# effect of Treatment ------------------------------- #
+resp.ph <- lsmeans(RESP_aov.sqrt, pairwise ~ Treatment)# pariwise Tukey Post-hoc test between repeated treatments
 resp.ph # view post hoc summary
 E1.pairs.RESP.05 <- cld(resp.ph, alpha=.05, Letters=letters) #list pairwise tests and letter display p < 0.05
-E1.pairs.RESP.05 # 
-E1.pairs.RESP.1 <- cld(resp.ph, alpha=.1, Letters=letters) #list pairwise tests and letter display p < 0.1
-E1.pairs.RESP.1 # maringal differences
+E1.pairs.RESP.05 # Ambient > Elevated ( Elevated  1.320509) ( Ambient   1.784314)
+# effect of Day ------------------------------- #
+resp.day <- lsmeans(RESP_aov.sqrt, pairwise ~ Day)# pariwise Tukey Post-hoc test between repeated treatments
+resp.day # view post hoc summary
+resp.day.RESP.05 <- cld(resp.day, alpha=.05, Letters=letters) #list pairwise tests and letter display p < 0.05
+resp.day.RESP.05 # day 16 least resp rate all others non sig diff
 
-RESP_FIG_DAYS8.24_FINAL <- 
-  RESP_FIG_DAYS8.24_FINAL + 
-  annotate("text", x=0.85, y=5.56, label = "de", size = 4) + 
-  annotate("text", x=1.2, y=4, label = "abc", size = 4) + 
-  annotate("text", x=1.9, y=10.0, label = "e", size = 4) + 
-  annotate("text", x=2.2, y=4, label = "abc", size = 4) + 
-  annotate("text", x=2.85, y=3.5, label = "ab", size = 4) + 
-  annotate("text", x=3.2, y=2.2, label = "a", size = 4) + 
-  annotate("text", x=3.85, y=8, label = "cde", size = 4) + 
-  annotate("text", x=4.2, y=4.8, label = "ab", size = 4) + 
-  annotate("text", x=4.85, y=8.6, label = "bcde", size = 4) + 
-  annotate("text", x=5.2, y=5.0, label = "bcd", size = 4) 
-RESP_FIG_DAYS8.24_FINAL
+
+
+
+#RESP_FIG_DAYS8.24_FINAL <- 
+ # RESP_FIG_DAYS8.24_FINAL + 
+ # annotate("text", x=0.85, y=5.56, label = "de", size = 4) + 
+# annotate("text", x=1.2, y=4, label = "abc", size = 4) + 
+# annotate("text", x=1.9, y=10.0, label = "e", size = 4) + 
+# annotate("text", x=2.2, y=4, label = "abc", size = 4) + 
+# annotate("text", x=2.85, y=3.5, label = "ab", size = 4) + 
+# annotate("text", x=3.2, y=2.2, label = "a", size = 4) + 
+# annotate("text", x=3.85, y=8, label = "cde", size = 4) + 
+# annotate("text", x=4.2, y=4.8, label = "ab", size = 4) + 
+# annotate("text", x=4.85, y=8.6, label = "bcde", size = 4) + 
+# annotate("text", x=5.2, y=5.0, label = "bcd", size = 4) 
+# RESP_FIG_DAYS8.24_FINAL
 
 #save file to output
-ggsave(file="Output/Larvae.resp.plot.pdf", RESP_FIG_DAYS8.24_FINAL, width = 12, height = 8, units = c("in"))
+ggsave(file="Output/Larvae.resp.plot.sqrt.pdf", RESP_FIG_DAYS8.24_FINAL, width = 12, height = 8, units = c("in"))
 
 ALL_DATA_table <- ALL_DATA %>%
   group_by(Day,Treatment) %>% #group the dataset by BOTH INITIAL AND SECONDARY TREATMENT

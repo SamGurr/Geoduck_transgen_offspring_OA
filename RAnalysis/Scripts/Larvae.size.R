@@ -54,16 +54,26 @@ Size.data <- read.csv(file="Data/Size_data/Size_larvae.csv", header=T) #read sam
 
 # Analysis
 names(Size.data)
-
+# filter data
 Size.data_2 <- Size.data %>% 
   filter(!(Age == "28_days")) #%>% # filter out day 28 becasue no samples for T3 (variable pH)
   #filter(Tank_ID %in% c("T1", "T3")) # select only T1 and T3 (T0 and T2 failed midway through experiment)
-
+# run the model
 aov.mod_1 <- aov(length_um ~ Parental_treatment*Age, data = Size.data_2)
 anova(aov.mod_1)
+# diagnostic tests and plots of model residuals (not transformed)
+# Shapiro test
+shapiro.test(residuals(aov.mod_1)) # residuals are normal - 0.05555
+# hist qq residual diagnostic
+par(mfrow=c(1,3)) #set plotting configuration
+par(mar=c(1,1,1,1)) #set margins for plots
+hist(residuals(aov.mod_1)) #plot histogram of residuals - normal bell curve
+boxplot(residuals(aov.mod_1)) #plot boxplot of residuals
+plot(fitted(aov.mod_1),residuals(aov.mod_1)) 
+qqnorm(residuals(aov.mod_1)) # qqplot - good qqnorm plot
 
-TukeyHSD(aov.mod_1)
-
+# post-hoc analysis
+TukeyHSD(aov.mod_1) # tukey of the model
 ID.size.ANOVA <- lsmeans(aov.mod_1, pairwise ~ Parental_treatment*Age)# pariwise Tukey Post-hoc test between repeated treatments
 ID.size.ANOVA # view post hoc summary
 Treatment.pairs.05 <- cld(ID.size.ANOVA, alpha=.05, Letters=letters) #list pairwise tests and letter display p < 0.05
@@ -85,5 +95,24 @@ Larvae.size.plot <- ggplot(Size.data_2, aes(x = factor(Age), y = length_um, fill
   labs(y=expression("Size"~(µm)), x=expression("Age"))
 Larvae.size.plot # view plot
 
+Larvae.size.plot_FINAL <- 
+  Larvae.size.plot + 
+  annotate("text", x=0.7, y=140, label = "a", size = 5) + 
+  annotate("text", x=1.3, y=145, label = "ab", size = 5) + 
+  annotate("text", x=1.7, y=150, label = "b", size = 5) + 
+  annotate("text", x=2.3, y=160, label = "c", size = 5) + 
+  annotate("text", x=2.7, y=180, label = "cd", size = 5) + 
+  annotate("text", x=3.3, y=175, label = "d", size = 5) + 
+  annotate("text", x=3.7, y=200, label = "e", size = 5) + 
+  annotate("text", x=4.3, y=210, label = "e", size = 5) + 
+  annotate("text", x=4.7, y=260, label = "e", size = 5) + 
+  annotate("text", x=5.3, y=220, label = "f", size = 5) +
+  annotate("text", x=2, y=185, label = "*", size = 5) +
+  annotate("text", x=5, y=270, label = "*", size = 5) +
+  annotate("segment", x = 2.25, xend = 1.75, y = 180, yend = 180, colour = "black") +
+  annotate("segment", x = 5.25, xend = 4.75, y = 265, yend = 265, colour = "black")
+Larvae.size.plot_FINAL
+
+
 #save file to output
-ggsave(file="Output/Larvae.size.plot.pdf", Larvae.size.plot, width = 12, height = 8, units = c("in"))
+ggsave(file="Output/Larvae.size.plot.pdf", Larvae.size.plot_FINAL, width = 12, height = 8, units = c("in"))
