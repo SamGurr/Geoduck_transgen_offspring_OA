@@ -1,3 +1,3 @@
 # Geoduck_transgenerational_OA
-Here is a new repository for 2019 experiments on a transgenerational study with Pacific Geoduck!
+This repository contains chemistry and physiology data from a transgenerational study with Pacific Geoduck in spring 2019.
 More details in regard to the Data and Script TBA as data is collected...
